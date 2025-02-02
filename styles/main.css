@@ -1,0 +1,357 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #004aad, #00bfff);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+    font-size: 2.2em;
+}
+
+.tagline {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column; /* Keeps text below image on mobile */
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+.bio {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* About Section */
+.about {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px; /* Space between image and text */
+}
+
+.about-right {
+    flex: 2;
+    text-align: left;
+    padding: 20px;
+}
+
+.projects-skye {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 40px auto;
+    max-width: 900px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.projects-container, .skye-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects-container h3, .skye-container h3 {
+    margin-bottom: 10px;
+    color: #00bfff;
+}
+
+.projects-container .project-description {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.skye-container .skye-logo {
+    max-width: 80px;
+    margin-bottom: 10px;
+}
+
+.skye-container .skye-slogan {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Skills List */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills-list li {
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/* Social Links */
+.socials {
+    margin-top: 30px;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5em;
+}
+
+.social-icons i {
+    font-size: 64px;
+    margin-right: 10px;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.2rem;
+    gap: 10px;
+}
+
+.social-icons a:hover i {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Contact */
+.contact {
+    margin-top: 30px;
+}
+
+.contact a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .hero-content {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-left {
+        margin-bottom: 20px;
+    }
+    
+    .profile-pic {
+        margin-right: 30px;
+        margin-top: -40px;
+        position: relative;
+    }
+
+    .projects-skye {
+        flex-wrap: wrap; /* Allow sections to wrap */
+        justify-content: space-around;
+    }
+
+    .projects-container, .skye-container {
+        width: 45%; /* Set width for larger screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .about-left {
+        margin-right: 20px; /* Space between image and bio */
+    }
+
+    .about-right {
+        text-align: left;
+    }
+
+    header {
+        padding: 1.5rem;
+    }
+
+    .bio {
+        margin-top: 20px; /* Slightly less top margin for smaller screens */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about {
+        text-align: center;
+    }
+
+    .socials {
+        padding: 1rem;
+    }
+
+    .social-icons a {
+        font-size: 1.2rem;
+    }
+
+    .projects-skye {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Space out the containers on smaller screens */
+    }
+
+    .projects-container, .skye-container {
+        width: 80%; /* Reduce width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .about h2 {
+        font-size: 1.4rem;
+    }
+
+    .social-icons a {
+        font-size: 1.1rem;
+    }
+
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .profile-pic {
+        max-width: 100px; /* Smaller profile pic on smaller screens */
+    }
+
+    .projects-container h3, .skye-container h3 {
+        font-size: 1.4rem;
+    }
+
+    .projects-container, .skye-container {
+        width: 100%; /* Full width on mobile */
+    }
+}
