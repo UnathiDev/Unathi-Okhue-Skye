@@ -60,6 +60,7 @@ h1 {
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6);
     transition: transform 0.3s ease-in-out;
     margin-bottom: 10px;
+    object-fit: cover;
 }
 
 .profile-pic:hover {
@@ -357,7 +358,7 @@ footer {
     }
 
     .profile-pic {
-        max-width: 100px; /* Smaller profile pic on smaller screens */
+        width: 100px; /* Smaller profile pic on smaller screens */
         height: 100px; /* Ensure height is the same as width */
         border-radius: 50%; /* Maintain round shape */
         object-fit: cover; /* Prevent distortion */
