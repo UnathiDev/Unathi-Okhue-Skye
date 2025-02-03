@@ -9,7 +9,7 @@
 
 /* Body Styling */
 body {
-    background: linear-gradient(135deg, #004aad, #00bfff);
+    background: linear-gradient(135deg, #3d6aa6, #6c8fc2);
     color: white;
     text-align: center;
     padding: 20px;
@@ -114,13 +114,22 @@ h1 {
 
 .projects-container h3, .skye-container h3 {
     margin-bottom: 10px;
-    color: #00bfff;
+    color: #3d6aa6;
 }
 
 .projects-container .project-description {
     font-size: 14px;
     color: #333;
     margin-bottom: 15px;
+}
+
+.skye-logo {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Ensures a perfect circle */
+    border-radius: 50%; /* Makes the image round */
+    object-fit: cover; /* Ensures the image fills the circle */
+    display: block;
+    margin: 0 auto; /* Centers the image */
 }
 
 .skye-container .skye-logo {
@@ -138,7 +147,7 @@ h1 {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #3d6aa6;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -146,7 +155,7 @@ h1 {
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #2e5283;
 }
 
 /* Skills List */
