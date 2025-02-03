@@ -259,6 +259,10 @@ footer {
         margin-right: 30px;
         margin-top: -40px;
         position: relative;
+        width: 100px; /* Adjust size for small screens */
+        height: 100px; /* Ensure height is the same as width */
+        border-radius: 50%; /* Maintain round shape */
+        object-fit: cover; /* Prevent distortion */
     }
 
     .projects-skye {
@@ -354,6 +358,9 @@ footer {
 
     .profile-pic {
         max-width: 100px; /* Smaller profile pic on smaller screens */
+        height: 100px; /* Ensure height is the same as width */
+        border-radius: 50%; /* Maintain round shape */
+        object-fit: cover; /* Prevent distortion */
     }
 
     .projects-container h3, .skye-container h3 {
