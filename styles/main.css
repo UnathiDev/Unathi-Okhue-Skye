@@ -1,374 +1,240 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-}
-
-/* Body Styling */
+/* Base Styles */
 body {
-    background: linear-gradient(135deg, #3d6aa6, #6c8fc2);
-    color: white;
-    text-align: center;
-    padding: 20px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #263a65, #3a5270); /* Darker blue-to-violet gradient */
+  color: #ffffff;
+  overflow-x: hidden;
+  transition: background 0.5s ease-in-out;
 }
 
-/* Header */
-header {
-    margin-bottom: 20px;
-    animation: fadeIn 2s ease-in-out;
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 50, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
 }
 
-h1 {
-    font-size: 2.2em;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
-.tagline {
-    font-size: 1.3em;
-    font-weight: bold;
-    margin-top: 10px;
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-/* Hero Section */
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 30px;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+nav a:hover {
+  color: #5a8d9c; /* Muted teal */
 }
 
-.hero-content {
-    display: flex;
-    flex-direction: column; /* Keeps text below image on mobile */
-    align-items: center;
-    max-width: 800px;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
+/* Profile Section */
+/* Profile and About Section Container */
+.profile-about-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 20px;
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+  flex-direction: row; /* Default to row for larger screens */
 }
 
-/* Profile Picture */
+/* Profile Section */
+.profile-section {
+  text-align: center;
+  flex: 1;
+  max-width: 300px; /* Controls width to balance layout */
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Background Info */
+.background-info {
+  flex: 2;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  animation: slideIn 1.5s ease-out;
+}
+
 .profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 2px solid white;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6);
-    transition: transform 0.3s ease-in-out;
-    margin-bottom: 10px;
-    object-fit: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  transition: transform 0.3s;
 }
 
 .profile-pic:hover {
-    transform: scale(1.05);
+  transform: scale(1.1);
 }
 
-.bio {
-    font-size: 1.2em;
-    line-height: 1.6;
+/* Background Info */
+.background-info {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin: 20px;
+  animation: slideIn 1.5s ease-out;
 }
 
-/* About Section */
-.about {
-    margin-top: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.about-left {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 20px; /* Space between image and text */
-}
-
-.about-right {
-    flex: 2;
-    text-align: left;
-    padding: 20px;
-}
-
-.projects-skye {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    margin: 40px auto;
-    max-width: 900px;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-}
-
-.projects-container, .skye-container {
-    flex: 1;
-    padding: 20px;
-    background-color: #f4f4f4;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.projects-container h3, .skye-container h3 {
-    margin-bottom: 10px;
-    color: #3d6aa6;
-}
-
-.projects-container .project-description {
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.skye-logo {
-    width: 100px; /* Adjust size as needed */
-    height: 100px; /* Ensures a perfect circle */
-    border-radius: 50%; /* Makes the image round */
-    object-fit: cover; /* Ensures the image fills the circle */
-    display: block;
-    margin: 0 auto; /* Centers the image */
-}
-
-.skye-container .skye-logo {
-    max-width: 80px;
-    margin-bottom: 10px;
-}
-
-.skye-container .skye-slogan {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-/* Button Styling */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #3d6aa6;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
-}
-
-.btn:hover {
-    background-color: #2e5283;
-}
-
-/* Skills List */
 .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-    list-style: none;
-    padding-left: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .skills-list li {
-    font-weight: bold;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 8px 12px;
-    border-radius: 5px;
+  background: #5a8d9c; /* Muted teal */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 
-/* Social Links */
-.socials {
-    margin-top: 30px;
+.skills-list li:hover {
+  background: #487a8c; /* Slightly darker teal */
 }
 
-.social-icons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.5em;
+/* Projects and Skye Section */
+.projects-container, .skye-container, .cv-download {
+  padding: 20px;
+  margin: 20px;
+  background: rgba(0, 0, 50, 0.8);
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
 }
 
-.social-icons i {
-    font-size: 64px;
-    margin-right: 10px;
-    color: #333;
-    transition: color 0.3s ease-in-out;
+.skye-logo {
+  width: 100px; /* Reduced size */
+  height: 100px; /* Maintain aspect ratio */
+  border-radius: 50%; /* Makes the image rounded */
+  object-fit: cover;
+  transition: transform 0.3s;
 }
 
-.social-icons a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-    font-size: 1.2rem;
-    gap: 10px;
+.skye-logo:hover {
+  transform: scale(1.1);
 }
 
-.social-icons a:hover i {
-    transform: scale(1.2);
-    transition: transform 0.3s ease-in-out;
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #5a8d9c; /* Muted teal */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
 }
 
-/* Contact */
+.btn:hover {
+  background: #487a8c; /* Slightly darker teal */
+  transform: scale(1.1);
+}
+
+/* Contact Section */
 .contact {
-    margin-top: 30px;
+  background: #263a65; /* Dark blue */
+  padding: 20px;
+  text-align: center;
 }
 
 .contact a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
 }
 
-h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
+.contact a:hover {
+  color: #5a8d9c; /* Muted teal */
 }
 
 /* Footer */
 footer {
-    margin-top: 40px;
-    font-size: 0.9em;
+  background: #0d1b2a;
+  padding: 20px;
+  text-align: center;
+  color: #fafafa;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
 }
 
 /* Responsive Design */
-@media (min-width: 768px) {
-    .hero-content {
-        flex-direction: row;
-        align-items: center;
-        text-align: left;
-    }
+@media (max-width: 1024px) {
+  nav {
+      flex-direction: column;
+      align-items: flex-start;
+  }
 
-    .about {
-        flex-direction: column;
-        text-align: center;
-    }
+  nav ul {
+      flex-direction: column;
+      gap: 10px;
+  }
 
-    .about-left {
-        margin-bottom: 20px;
-    }
-    
-    .profile-pic {
-        margin-right: 30px;
-        margin-top: -40px;
-        position: relative;
-        width: 100px; /* Adjust size for small screens */
-        height: 100px; /* Ensure height is the same as width */
-        border-radius: 50%; /* Maintain round shape */
-        object-fit: cover; /* Prevent distortion */
-    }
+  .profile-pic {
+      width: 120px;
+      height: 120px;
+  }
 
-    .projects-skye {
-        flex-wrap: wrap; /* Allow sections to wrap */
-        justify-content: space-around;
-    }
-
-    .projects-container, .skye-container {
-        width: 45%; /* Set width for larger screens */
-    }
+  /* Stack profile section above background info on smaller screens */
+  .profile-about-container {
+      flex-direction: column;
+      align-items: center;
+  }
 }
 
 @media (max-width: 768px) {
-    .about {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
+  .background-info, .projects-container, .skye-container, .cv-download {
+      margin: 10px;
+      padding: 15px;
+  }
 
-    .about-left {
-        margin-right: 20px; /* Space between image and bio */
-    }
+  nav ul {
+      gap: 8px;
+  }
 
-    .about-right {
-        text-align: left;
-    }
-
-    header {
-        padding: 1.5rem;
-    }
-
-    .bio {
-        margin-top: 20px; /* Slightly less top margin for smaller screens */
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .tagline {
-        font-size: 1rem;
-    }
-
-    .hero-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about {
-        text-align: center;
-    }
-
-    .socials {
-        padding: 1rem;
-    }
-
-    .social-icons a {
-        font-size: 1.2rem;
-    }
-
-    .projects-skye {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px; /* Space out the containers on smaller screens */
-    }
-
-    .projects-container, .skye-container {
-        width: 80%; /* Reduce width on smaller screens */
-    }
+  .btn {
+      padding: 8px 16px;
+  }
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 1.6rem;
-    }
+  nav {
+      padding: 10px;
+  }
 
-    .tagline {
-        font-size: 1rem;
-    }
+  nav ul {
+      gap: 5px;
+  }
 
-    .about h2 {
-        font-size: 1.4rem;
-    }
+  .profile-pic {
+      width: 100px;
+      height: 100px;
+  }
 
-    .social-icons a {
-        font-size: 1.1rem;
-    }
-
-    .hero {
-        padding: 2rem 1rem;
-    }
-
-    .profile-pic {
-        width: 100px; /* Smaller profile pic on smaller screens */
-        height: 100px; /* Ensure height is the same as width */
-        border-radius: 50%; /* Maintain round shape */
-        object-fit: cover; /* Prevent distortion */
-    }
-
-    .projects-container h3, .skye-container h3 {
-        font-size: 1.4rem;
-    }
-
-    .projects-container, .skye-container {
-        width: 100%; /* Full width on mobile */
-    }
+  footer {
+      font-size: 0.9rem;
+  }
 }
