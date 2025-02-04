@@ -41,23 +41,23 @@ nav a:hover {
 }
 
 /* Profile Section */
-/* Profile and About Section Container */
 .profile-about-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 30px;
   padding: 20px;
-  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
-  flex-direction: row; /* Default to row for larger screens */
+  flex-wrap: wrap;
+  flex-direction: column; /* Changed for smaller screens */
 }
 
-/* Profile Section */
 .profile-section {
   text-align: center;
   flex: 1;
-  max-width: 300px; /* Controls width to balance layout */
+  max-width: 300px;
   animation: fadeIn 2s ease-in-out;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Background Info */
@@ -66,6 +66,7 @@ nav a:hover {
   padding: 20px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
+  margin: 20px;
   animation: slideIn 1.5s ease-out;
 }
 
@@ -81,15 +82,6 @@ nav a:hover {
   transform: scale(1.1);
 }
 
-/* Background Info */
-.background-info {
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  margin: 20px;
-  animation: slideIn 1.5s ease-out;
-}
-
 .skills-list {
   list-style: none;
   padding: 0;
@@ -99,14 +91,14 @@ nav a:hover {
 }
 
 .skills-list li {
-  background: #5a8d9c; /* Muted teal */
+  background: #5a8d9c;
   padding: 10px 20px;
   border-radius: 5px;
   transition: background 0.3s;
 }
 
 .skills-list li:hover {
-  background: #487a8c; /* Slightly darker teal */
+  background: #487a8c;
 }
 
 /* Projects and Skye Section */
@@ -120,9 +112,9 @@ nav a:hover {
 }
 
 .skye-logo {
-  width: 100px; /* Reduced size */
-  height: 100px; /* Maintain aspect ratio */
-  border-radius: 50%; /* Makes the image rounded */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
   object-fit: cover;
   transition: transform 0.3s;
 }
@@ -134,7 +126,7 @@ nav a:hover {
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background: #5a8d9c; /* Muted teal */
+  background: #5a8d9c;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -142,13 +134,14 @@ nav a:hover {
 }
 
 .btn:hover {
-  background: #487a8c; /* Slightly darker teal */
+  background: #487a8c;
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 /* Contact Section */
 .contact {
-  background: #263a65; /* Dark blue */
+  background: #263a65;
   padding: 20px;
   text-align: center;
 }
@@ -159,7 +152,7 @@ nav a:hover {
 }
 
 .contact a:hover {
-  color: #5a8d9c; /* Muted teal */
+  color: #5a8d9c;
 }
 
 /* Footer */
@@ -198,7 +191,6 @@ footer {
       height: 120px;
   }
 
-  /* Stack profile section above background info on smaller screens */
   .profile-about-container {
       flex-direction: column;
       align-items: center;
@@ -230,11 +222,16 @@ footer {
   }
 
   .profile-pic {
-      width: 100px;
-      height: 100px;
+      width: 120px; /* Increased size */
+      height: 120px; /* Increased size */
   }
 
   footer {
       font-size: 0.9rem;
+  }
+
+  .projects-container, .skye-container, .cv-download {
+    margin: 15px;
+    padding: 18px;
   }
 }
