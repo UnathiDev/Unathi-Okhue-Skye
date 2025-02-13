@@ -57,6 +57,13 @@ html, body {
   background: #004d66; /* Even darker blue on active click */
 }
 
+.background-info {
+  margin-top: -40px; /* Pushes the whole section up */
+  padding: 20px; /* Adjusts padding if needed */
+  background-color: #fff; /* Optional background color */
+  border-radius: 8px; /* Optional border radius for aesthetics */
+}
+
 /* Navigation Bar */
 nav {
   background-color: #003b5c; /* Dark blue background */
@@ -94,6 +101,7 @@ nav ul li a:hover {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  margin-top: 70px; /* Adjust this value as needed */
 }
 .profile-section {
   flex: 1;
