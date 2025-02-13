@@ -245,6 +245,19 @@ nav ul li a:hover {
     background-color: #006080;
 }
 
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    text-decoration: none;
+    color: #333;
+}
+
+.github-link i {
+    margin-right: 8px; /* Adds space between the icon and text */
+    font-size: 18px;   /* Adjusts the icon size */
+}
+  
 /* Footer Styles */
 footer {
     text-align: center;
