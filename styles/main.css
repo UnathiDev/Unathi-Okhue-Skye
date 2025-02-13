@@ -552,6 +552,7 @@ footer {
   }
 
   .profile-pic {
+    margin-top: 100px;
     max-width: 130px;
   }
 
@@ -661,6 +662,11 @@ footer {
     min-width: 90px;
     max-width: 120px;
     padding: 8px 12px; /* Adjust padding */
+  }
+
+  .profile-pic {
+    margin-top: 120px; /* Ensure enough space */
+    max-width: 120px; /* Slightly reduce size for small devices */
   }
 }
 
