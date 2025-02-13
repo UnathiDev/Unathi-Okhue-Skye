@@ -1,0 +1,428 @@
+/* Main Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* White background */
+  color: #333333; /* Dark gray text */
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center everything horizontally */
+  justify-content: flex-start; /* Align content to the top */
+  height: 100vh;
+}
+
+html, body {
+  overflow-x: hidden; /* Disables horizontal scrolling */
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+  height: 8px; /* Set the height of the scrollbar (for horizontal scrollbars) */
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f4f4; /* Light gray background for the track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0099cc; /* Lighter blue color for the thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+  transition: background 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #006080; /* Darker blue on hover for the thumb */
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #004d66; /* Even darker blue on active click */
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #003b5c; /* Dark blue background */
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  color: #ffffff; /* White text for links */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+nav ul li a:hover {
+  color: #0099cc; /* Lighter blue on hover */
+}
+
+/* Profile Section */
+.profile-section {
+  text-align: center;
+  padding: 100px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #0099cc; /* Lighter blue border */
+  transition: transform 0.3s ease-in-out;
+}
+.profile-pic:hover {
+  transform: scale(1.1);
+}
+
+/* Skills Section */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  text-align: center;
+}
+.skill {
+  background: #f4f4f4; /* Light gray background for skills */
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s ease-in-out;
+}
+.skill:hover {
+  background: #0099cc; /* Lighter blue on hover */
+}
+.skill-icon {
+  font-size: 24px;
+}
+
+.timeline-container {
+  padding: 50px 20px;
+  background-color: #ffffff;
+  margin-top: 60px;
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+  text-align: center;
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  gap: 30px;
+  max-width: 100%; /* Allow content to expand fully */
+  width: 100%; /* Make sure the timeline container takes full width */
+  margin: 0 auto; /* Ensure the timeline stays centered */
+}
+
+/* Timeline Item */
+.timeline-item {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Ensure the width of the item is responsive */
+  max-width: 600px; /* Prevent the item from becoming too wide */
+  margin: 0 auto; /* Center the item */
+  position: relative; /* To position the date in the center */
+}
+
+.timeline-item:hover {
+  transform: scale(1.05);
+}
+
+/* Timeline Content */
+.timeline-content {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin-left: 50px;
+  width: auto; /* Allow content to stretch */
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  padding-left: 15px;
+  padding-top: 40px; /* Adjust for date positioning */
+}
+
+/* Timeline Date */
+.timeline-date {
+  font-weight: bold;
+  color: #003b5c;
+  font-size: 1.2em;
+  display: block;
+  margin-bottom: 10px;
+  position: absolute; /* Use absolute positioning */
+  top: 20%; /* Center it vertically */
+  left: 50%; /* Center it horizontally */
+  transform: translate(-50%, -50%); /* Adjust to center */
+}
+
+.timeline-content:hover {
+  background-color: #e6f7ff; /* Light blue on hover */
+}
+
+.timeline-content h3 {
+  font-size: 1.3em;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.timeline-content p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  background-color: #ffffff; /* Alternate colors for better contrast */
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  background-color: #f3f9fb;
+}
+
+/* Timeline Circular Markers */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -18px;
+  top: 10px;
+  width: 0px;
+  height: 0px;
+  background-color: #0099cc;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  z-index: 2;
+}
+
+/* Skye Image */
+.skye-container img {
+  width: 100px; /* Smaller size */
+  height: 100px;
+  border-radius: 50%; /* Make the image rounded */
+  object-fit: cover; /* Ensures the image fits within the circle */
+}
+
+/* Projects and Brand Section */
+.projects-container, .skye-container {
+  text-align: center;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0099cc; /* Lighter blue button */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+.btn:hover {
+  background-color: #006080; /* Darker blue on hover */
+}
+
+/* Contact Section */
+/* Add space between the Contact Me section and Resume button */
+#contact {
+  margin-bottom: 50px; /* Adds space below the Contact Me section */
+}
+
+
+.contact {
+  text-align: center;
+  padding: 20px 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-top: 1px solid #006080; /* Subtle line at the top */
+  border-bottom: 2px solid #006080; /* Subtle line at the bottom */
+}
+
+.contact h2 {
+  font-size: 2em;
+  color: #333333;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase; /* Adds emphasis */
+}
+
+.contact-info {
+  margin-bottom: 30px;
+  font-size: 1.1em;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  color: #555555;
+  font-weight: 400;
+}
+
+.contact-info a {
+  color: #0099cc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-info a:hover {
+  color: #006080; /* Darker shade of blue on hover */
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  font-size: 1.5em;
+  color: #333333;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+  color: #0099cc; /* Lighter blue on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+.social-links a:active {
+  transform: scale(0.9); /* Button shrink effect on click */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #003b5c; /* Dark blue background */
+  margin-top: 50px;
+  color: #ffffff; /* White text */
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .timeline-container {
+    padding: 40px 10px;
+  }
+
+  .timeline-item {
+    padding-left: 30px; /* Adjust padding for smaller screens */
+    margin-left: 10px; /* Reduce the left margin */
+  }
+
+  .timeline-content {
+    max-width: 100%; /* Allow content to fill the available width */
+    margin-left: 0; /* Remove margin to prevent overflow */
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-section {
+    padding: 80px 10px 30px;
+  }
+  .skills-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .projects-container, .skye-container, .contact {
+    padding: 30px 10px;
+  }
+
+  h2 {
+    font-size: 1.8em; /* Adjust heading size for mobile */
+  }
+
+  .timeline-date {
+    font-size: 1em; /* Slightly smaller date font on mobile */
+  }
+
+  .timeline {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    width: 100%; /* Full width */
+    gap: 15px; /* Reduce gap */
+  }
+
+  .timeline-item {
+    margin-left: 0;
+    padding-left: 20px; /* Adjust padding */
+    width: 100%; /* Ensure full width */
+    width: 95%; /* Take up a little more space on smaller screens */
+    max-width: 100%; /* Allow items to be full-width on small screens */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .timeline-content {
+    max-width: 100%; /* Allow content to fill available space */
+    margin-left: 0; /* Remove left margin */
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+  .btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+  .social-links a {
+    font-size: 18px;
+  }
+
+  .timeline-container {
+    padding: 30px 10px;
+  }
+
+  .timeline-item {
+    padding-left: 15px; /* Adjust padding further for extra small screens */
+  }
+
+  .timeline-content {
+    max-width: 100%; /* Ensure no overflow */
+    width: 100%; /* Stretch content */
+    padding: 10px; /* Adjust padding */
+  }
+  .timeline-date {
+    font-size: 0.9em; /* Further reduce date font on very small screens */
+  }
+}

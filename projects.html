@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projects - My Portfolio</title>
+    <link rel="stylesheet" href="styles/projects.css">
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="skye.html">My Brand</a></li>
+        </ul>
+    </nav>
+
+    <!-- Introductory Section -->
+    <section class="intro-container">
+        <br>
+        <p>As a passionate coder, I continuously strive to develop innovative solutions to everyday challenges. 
+            These projects reflect my journey as I explore different programming languages and concepts. 
+            Each project has been built with a focus on solving real-world problems while expanding my skills. 
+            Below, you will find some of my portfolio applications, each of which has a unique purpose 
+            and showcases my growth as a developer. I hope they provide insight into my abilities 
+            and my commitment to creating useful and impactful software.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <div class="projects-container">
+        <h2>My Projects</h2>
+    
+        <div class="projects-wrapper">
+            <!-- Library Management System -->
+            <div class="project-card">
+                <h3>Library Management System</h3>
+                <p>
+                    This project implements a simple Library Management System with core functionalities like member registration, book cataloging, book borrowing/returning and basic statistics.
+                </p>
+                <div class="language">Languages Used: Java, SQL</div>
+                <a href="documents/LMS -PHASE 1 - System Design Documentation.pdf" class="download-doc" download>Download Systems Design Documentation</a>
+                <a href="documents/LMS -PHASE 4 - Test Plan Documentation.pdf" class="download-doc" download>Download Test Plan Documentation</a>
+                <a href="https://github.com/UnathiDev/Library-Management-System" class="github-link" target="_blank">View on GitHub</a>
+            </div>
+        
+            <!-- School Management System -->
+            <div class="project-card">
+                <h3>School Management System</h3>
+                <p>
+                    This project develops a School Management System with functionalities such as student enrollment, course information and staff management.
+                </p>
+                <div class="language">Languages Used: Java, SQL</div>
+                <a href="documents/SMS -PHASE 1 - System Design Documentation.pdf" class="download-doc" download>Download Systems Design Documentation</a>
+                <a href="documents/SMS -PHASE 4 - Test Plan Documentation.pdf" class="download-doc" download>Download Test Plan Documentation</a>
+                <a href="https://github.com/UnathiDev/School-Management-System" class="github-link" target="_blank">View on GitHub</a>
+            </div>
+
+            <!-- Student App -->
+            <div class="project-card">
+                <h3>Student Management App</h3>
+                <p>
+                    This project is a Student Management System built using PyQt5 for the GUI interface. 
+                    It allows users to input and manage student records, including personal details, 
+                    academic performance and automatically generated institutional email addresses.
+                </p>    
+                <div class="language">Languages Used: Python</div>
+                <a href="https://github.com/UnathiDev/Python-Student-App" class="github-link" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </div>
+  
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Unathi Okhue. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleProject(projectId) {
+            const project = document.getElementById(`project-${projectId}`);
+            project.classList.toggle('expanded');
+        }
+    </script>
+</body>
+</html>
