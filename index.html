@@ -40,7 +40,7 @@
       <section id="skills">
         <h2>Skills</h2>
         <ul class="skills-list">
-          <li class="skill"><i class="fab fa-cplusplus skill-icon"></i><span>C++</span></li>
+          <li class="skill"><i class="fab fa-c skill-icon"></i><sup>++</sup><span>C++</span></li>
           <li class="skill"><i class="fab fa-python skill-icon"></i><span>Python</span></li>
           <li class="skill"><i class="fab fa-java skill-icon"></i><span>Java</span></li>
           <li class="skill"><i class="fas fa-brain skill-icon"></i><span>Analytical Thinking</span></li>
@@ -51,47 +51,52 @@
   </section>
 
   <section class="timeline-container" id="timeline">
-    <h2>My Journey</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <span class="timeline-date">2024</span>
-          <h3>Begun first year at UNISA (BSc Informatics)</h3>
+    <button class="toggle-btn" onclick="toggleJourney()">
+      My Journey <i class="fas fa-chevron-down"></i>
+    </button>
+
+    <div id="journey-content" class="hidden">
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <span class="timeline-date">2024</span>
+            <h3>Begun first year at UNISA (BSc Informatics)</h3>
+          </div>
         </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <span class="timeline-date">2024 December</span>
-          <h3>Completed 2 Java portfolio projects</h3>
-          <p>School Management System & Library Management System</p>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <span class="timeline-date">2024 December</span>
+            <h3>Completed 2 Java portfolio projects</h3>
+            <p>School Management System & Library Management System</p>
+          </div>
         </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <span class="timeline-date">2024 December</span>
-          <h3>Added a Python student app to project portfolio</h3>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <span class="timeline-date">2024 December</span>
+            <h3>Added a Python student app to project portfolio</h3>
+          </div>
         </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <span class="timeline-date">2025 January</span>
-          <h3>Begun Second Year at UNISA</h3>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <span class="timeline-date">2025 January</span>
+            <h3>Begun Second Year at UNISA</h3>
+          </div>
         </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <span class="timeline-date">2025 January (in progress)</span>
-          <h3>Pharmacy Management System Portfolio Project</h3>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <span class="timeline-date">2025 January (in progress)</span>
+            <h3>Pharmacy Management System Portfolio Project</h3>
+          </div>
         </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <span class="timeline-date">2025 January (in progress)</span>
-          <h3>Expansion & Practice with Web Development</h3>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <span class="timeline-date">2025 January (in progress)</span>
+            <h3>Expansion & Practice with Web Development</h3>
+          </div>
         </div>
       </div>
     </div>
-  </section>  
+  </section>
 
   <section class="projects-container" id="projects">
     <h2>Latest Project</h2>
@@ -121,15 +126,25 @@
       <p><i class="fas fa-phone-alt"></i> <a href="tel:+27710480425">+27 71 048 0425</a></p>
     </div>
     <div class="social-links">
-      <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/UnathiDev" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/unathiokhue?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/novaero7?igsh=MWptY3ZlMTRqM2h2YQ== " target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/share/18epNfArTz/ " target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://x.com/aero_unstar?t=XVhGEDkdQ36KwkOTIfLcew&s=09 " target="_blank"><i class="fab fa-twitter"></i></a>
     </div>
   </section>  
 
   <footer>
     <p>&copy; 2025 Unathi Okhue. All Rights Reserved.</p>
   </footer>
+  <script>
+    function toggleJourney() {
+      const content = document.getElementById("journey-content");
+      const button = document.querySelector(".toggle-btn");
+  
+      content.classList.toggle("hidden");
+      button.classList.toggle("active");
+    }  
+  </script>
 </body>
 </html>
