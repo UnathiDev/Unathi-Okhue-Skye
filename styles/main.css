@@ -74,15 +74,59 @@ nav ul li a:hover {
 }
 
 /* Profile Section */
+.profile-about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
 .profile-section {
+  flex: 1;
   text-align: center;
-  padding: 100px 20px 50px;
+  padding: 120px 20px 50px; /* Increased top padding from 100px to 120px */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 80px;
 }
+
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+.toggle-btn i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.toggle-btn.active i {
+  transform: rotate(180deg); /* Rotates arrow when expanded */
+}
+
+.toggle-btn:hover {
+  background-color: #0056b3;
+}
+
+.background-info {
+  flex: 2;
+  padding: 20px;
+}
+
 .profile-pic {
+  max-width: 200px;
+  border-radius: 50%;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -356,6 +400,7 @@ footer {
   }
   .profile-section {
     padding: 80px 10px 30px;
+    padding-top: 140px; /* Increase padding on smaller screens */
   }
   .skills-list {
     flex-direction: column;
