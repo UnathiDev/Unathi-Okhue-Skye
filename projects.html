@@ -1,187 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Projects - My Portfolio</title>
-    <link rel="stylesheet" href="styles/projects.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore Unathi Okhue's featured development projects. From Python apps to web tools and system designs—discover a portfolio of innovation, tech, and creativity." />
+  <meta name="keywords" content="Unathi Okhue, projects, software development, portfolio, BSc Informatics, Python, web development, tech, Skye, AI" />
+  <meta name="author" content="Unathi Okhue" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Unathi's Project Portfolio" />
+  <meta property="og:description" content="A showcase of Unathi Okhue's coding projects and creative builds." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourdomain.com/projects.html" />
+  <meta property="og:image" content="https://yourdomain.com/images/projects-preview.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Unathi's Project Portfolio" />
+  <meta name="twitter:description" content="Explore the latest tech projects, tools, and apps by Unathi Okhue." />
+  <meta name="twitter:image" content="https://yourdomain.com/images/projects-preview.jpg" />
+  <title>Projects | Unathi Okhue – Software Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-8oNRNlfkT9Ae1v3rEGYoL+MXflz61+FHp4XnSkq38PDDVZuqQvTDiPlyHh4WnH+8EQLXGMLxUqP3eoIgG8C/Vg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles/projects.css">
+  <link rel="icon" href="path/to/your/icon.png" type="image/png">
+  <!-- Standard Favicon -->
+  <link rel="icon" href="images/icons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="images/icons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="images/icons/favicon-32x32.png" sizes="48x48" type="image/png">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="robots" content="index, follow">
-    <meta name="description" content="Explore Unathi Okhue's programming projects portfolio, showcasing a variety of software solutions including library and school management systems, student apps, and more.">
-    <meta name="keywords" content="software development, library management system, school management system, Python app, programming projects, web development, portfolio, Unathi Okhue, tech, software engineer, programming">
-    <meta name="author" content="Unathi Okhue">
-    <meta name="copyright" content="Unathi Okhue">
-    <meta name="language" content="English">
-    <meta name="theme-color" content="#0099cc">
+  <!-- Favicon for all browsers -->
+  <link rel="icon" href="images/icons/favicon.ico">
 
-    <!-- Open Graph (Facebook, LinkedIn, and others) -->
-    <meta property="og:title" content="My Projects Portfolio - Unathi Okhue | Software Development and Programming">
-    <meta property="og:description" content="Explore Unathi Okhue's programming projects portfolio, showcasing a variety of software solutions including library and school management systems, student apps, and more.">
-    <meta property="og:image" content="https://www.example.com/images/portfolio-cover.jpg">
-    <meta property="og:url" content="https://www.example.com">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Unathi Okhue Portfolio">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:updated_time" content="2025-02-13T00:00:00Z">
-
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="My Projects Portfolio - Unathi Okhue">
-    <meta name="twitter:description" content="Explore Unathi Okhue's programming projects portfolio, showcasing a variety of software solutions including library and school management systems, student apps, and more.">
-    <meta name="twitter:image" content="https://www.example.com/images/portfolio-cover.jpg">
-    <meta name="twitter:creator" content="@UnathiOkhue">
-
-    <!-- Structured Data (JSON-LD for SEO) -->
-    <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Unathi Okhue",
-    "url": "https://www.example.com",
-    "image": "https://www.example.com/images/profile.jpg",
-    "sameAs": [
-        "https://www.facebook.com/unathi.okhue",
-        "https://twitter.com/unathiokhue",
-        "https://www.linkedin.com/in/unathiokhue",
-        "https://github.com/unathiokhue"
-    ],
-    "jobTitle": "Software Developer",
-    "worksFor": {
-        "@type": "Organization",
-        "name": "Skye"
-    }
-    }
-    </script>
-
-    <!-- Canonical Link -->
-    <link rel="canonical" href="https://www.example.com">
-
-    <!-- Additional SEO Tags -->
-    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <meta name="revisit-after" content="7 days">
-    <meta name="googlebot" content="index, follow">
-    <meta name="google" content="nositelinkssearchbox">
-    <meta name="generator" content="HTML5">
-    <meta name="google-site-verification" content="your-verification-code">
-    <meta name="msvalidate.01" content="your-bing-verification-code">
-
-    <!-- Favicon and Branding -->
-    <link rel="icon" href="https://www.example.com/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="https://www.example.com/apple-touch-icon.png">
-
-    <!-- Mobile-Friendly Tags -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Unathi Okhue Portfolio">
-
-    <!-- Language Tags -->
-    <meta name="Content-Language" content="en">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <!-- Page-Specific Meta Tags (For Individual Pages) -->
-    <meta name="description" content="Library Management System - A software solution for managing library resources, including member registration, book cataloging, and book borrowing.">
-    <meta name="keywords" content="Library Management, Book Cataloging, Library Software, Library System, Programming Projects">
-    <meta property="og:title" content="Library Management System - Unathi Okhue">
-    <meta property="og:description" content="A software solution for managing library resources, including member registration, book cataloging, and book borrowing.">
-    <meta property="og:url" content="https://www.example.com/projects/library-management">
-    <meta property="og:type" content="website">
-        
+  <!-- Optional for high resolution / retina displays -->
+  <link rel="icon" href=images/icons/favicon-32x32.png" sizes="32x32" type="image/png">
 </head>
 <body>
-    <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="https://unathidev.github.io/skye-portal/index.html">Skye</a></li>
-        </ul>
-    </nav>
+  <nav role="navigation" aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="skye.html">Skye</a></li>
+    </ul>
+  </nav>
 
-    <!-- Introductory Section -->
-    <section class="intro-container">
-        <br><br><br>
-        <p>As a passionate coder, I continuously strive to develop innovative solutions to everyday challenges. 
-            These projects reflect my journey as I explore different programming languages and concepts. 
-            Each project has been built with a focus on solving real-world problems while expanding my skills. 
-            Below, you will find some of my portfolio applications, each of which has a unique purpose 
-            and showcases my growth as a developer. I hope they provide insight into my abilities 
-            and my commitment to creating useful and impactful software.</p>
-    </section>
+  <header class="intro">
+    <p>Welcome to my projects showcase. Here, you'll find a selection of tools, apps and systems I've designed and built while studying Informatics and exploring innovative tech solutions.</p>
+  </header>
 
-    <!-- Projects Section -->
-    <div class="projects-container">
-        <h2 class="slide-in">My Projects</h2>
-    
-        <div class="projects-wrapper">
-            <!-- Library Management System -->
-            <div class="project-card">
-                <h3>Library Management System</h3>
-                <p>
-                    This project implements a simple Library Management System with core functionalities like member registration, book cataloging, book borrowing/returning and basic statistics.
-                </p>
-                <div class="language">Languages Used: Java, SQL</div>
-                <a href="documents/LMS -PHASE 1 - System Design Documentation.pdf" class="download-doc" download>Download Systems Design Documentation</a>
-                <a href="documents/LMS -PHASE 4 - Test Plan Documentation.pdf" class="download-doc" download>Download Test Plan Documentation</a>
-                <a href="https://github.com/UnathiDev/Library-Management-System" class="github-link" target="_blank"><i class="fab fa-github"></i>View on GitHub</a>
-            </div>
+  <main>
+    <h1>Featured Projects</h1>
+    <body>
+      <section class="projects-container">
+        <!-- Library Management System -->
+        <div class="project-card">
+          <h3>Library Management System</h3>
+          <p>
+            This project implements a simple Library Management System with core functionalities like member registration, book cataloging, book borrowing/returning and basic statistics.
+          </p>
         
-            <!-- School Management System -->
-            <div class="project-card">
-                <h3>School Management System</h3>
-                <p>
-                    This project develops a School Management System with functionalities such as student enrollment, course information and staff management.
-                </p>
-                <div class="language">Languages Used: Java, SQL</div>
-                <a href="documents/SMS -PHASE 1 - System Design Documentation.pdf" class="download-doc" download>Download Systems Design Documentation</a>
-                <a href="documents/SMS -PHASE 4 - Test Plan Documentation.pdf" class="download-doc" download>Download Test Plan Documentation</a>
-                <a href="https://github.com/UnathiDev/School-Management-System" class="github-link" target="_blank"><i class="fab fa-github"></i>View on GitHub</a>
-            </div>
-
-            <!-- Student App -->
-            <div class="project-card">
-                <h3>Student Management App</h3>
-                <p>
-                    This project is a Student Management System built using PyQt5 for the GUI interface. 
-                    It allows users to input and manage student records, including personal details, 
-                    academic performance and automatically generated institutional email addresses.
-                </p>    
-                <div class="language">Languages Used: Python</div>
-                <a href="https://github.com/UnathiDev/Python-Student-App" class="github-link" target="_blank"><i class="fab fa-github"></i>View on GitHub</a>
-            </div>
+          <!-- Icons using Simple Icons CDN -->
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/java.svg" alt="Java" width="24" height="24" />
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/mysql.svg" alt="MySQL" width="24" height="24" />
+        
+          <br><br>
+        
+          <a href="documents/LMS -PHASE 1 - System Design Documentation.pdf" class="download-doc" download>
+            Download Systems Design Documentation
+          </a>
+          <a href="documents/LMS -PHASE 4 - Test Plan Documentation.pdf" class="download-doc" download>
+            Download Test Plan Documentation
+          </a>
+          <a href="https://github.com/UnathiDev/Library-Management-System" class="github-link" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="24" height="24" />
+            View on GitHub
+          </a>
         </div>
-    </div>
-  
+        
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Unathi Okhue. All Rights Reserved.</p>
-    </footer>
+        <!-- School Management System -->
+        <div class="project-card">
+          <h3>School Management System</h3>
+          <p>
+            This system was developed in Java to handle school operations, such as student records, results, and staff administration.
+          </p>
+        
+          <!-- Icons using Simple Icons CDN -->
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/java.svg" alt="Java" width="24" height="24" />
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/mysql.svg" alt="MySQL" width="24" height="24" />
+        
+          <br><br>
+        
+          <a href="documents/LMS -PHASE 1 - System Design Documentation.pdf" class="download-doc" download>
+            Download Systems Design Documentation
+          </a>
+          <a href="documents/LMS -PHASE 4 - Test Plan Documentation.pdf" class="download-doc" download>
+            Download Test Plan Documentation
+          </a>
+          <a href="https://github.com/UnathiDev/School-Management-System" class="github-link" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="24" height="24" />
+            View on GitHub
+          </a>
+        </div>
+    
+        <!-- Registration App -->
+        <div class="project-card">
+          <h3>Registration App</h3>
+          <p>
+            A Python GUI application created to assist with student registration
+          </p>
+        
+          <!-- Icons using Simple Icons CDN -->
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/python.svg" alt="Python" width="24" height="24" />
+        
+          <br><br>
+        
+          <a href="https://github.com/UnathiDev/Python-Registration-App" class="github-link" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="24" height="24" /> View on GitHub
+          </a>
+        </div>
+  </main>
 
-    <script>
-        function toggleProject(projectId) {
-            const project = document.getElementById(`project-${projectId}`);
-            project.classList.toggle('expanded');
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const projectDivs = document.querySelectorAll(".project");
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("fade-up");
-                        observer.unobserve(entry.target); // Ensures animation happens only once
-                    }
-                });
-            }, { threshold: 0.2 }); // Trigger when 20% of the div is visible
-
-            projectDivs.forEach(div => {
-                observer.observe(div);
-            });
-        });
-
-    </script>
+  <footer>
+    &copy; 2025 Unathi Okhue. All rights reserved.
+  </footer>
 </body>
 </html>
