@@ -5,17 +5,10 @@
 }
 
 html, body {
-  height: 100%;
   width: 100%;
-  overflow: hidden;
-  overflow-y: auto;
+  overflow-y: auto; /* Allow vertical scrolling */
   background: #f9f9f9;
   color: #333;
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
 }
 
 header {
@@ -24,11 +17,6 @@ header {
   color: #fff;
   text-align: center;
   padding: 1rem;
-}
-
-@keyframes slideIn {
-  0% { transform: translateY(-50px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
 }
 
 header h1 {
@@ -54,7 +42,7 @@ nav a:hover {
 }
 
 main {
-  height: 75vh;
+  min-height: 75vh; /* Ensure the main content takes enough space */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -68,15 +56,10 @@ section {
   flex: 1 1 45%;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   padding: 1rem;
-  overflow-y: auto;
+  overflow-y: auto; /* Allow sections to scroll individually if necessary */
   max-height: 100%;
-}
-
-@keyframes slideUp {
-  0% { transform: translateY(50px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
 }
 
 .profile {
@@ -93,72 +76,44 @@ section {
 }
 
 .contact-container {
-display: flex;
-flex-direction: column;
-gap: 1rem;
-margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .contact-card {
-display: flex;
-align-items: center;
-gap: 10px;
-padding: 1rem;
-background: #f1f1f1;
-border-radius: 12px;
-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-transition: background 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem;
+  background: #f1f1f1;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .contact-card i,
 .contact-card img {
-width: 24px;
-height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 .contact-card a {
-color: #333;
-text-decoration: none;
-font-weight: 500;
-transition: color 0.2s ease; /* Only color changes on hover */
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease; /* Only color changes on hover */
 }
 
 .socials a {
   margin-right: 10px;
   display: inline-block;
-  opacity: 0; /* Start hidden for animation */
-  transform: translateY(20px); /* Start off screen */
-  animation: fadeInUp 1s forwards;
-}
-
-.socials a:nth-child(1) {
-  animation-delay: 0.2s;
-}
-
-.socials a:nth-child(2) {
-  animation-delay: 0.4s;
-}
-
-.socials a:nth-child(3) {
-  animation-delay: 0.6s;
-}
-
-.socials a:nth-child(4) {
-  animation-delay: 0.8s;
-}
-
-.socials a:nth-child(5) {
-  animation-delay: 1s;
-}
-
-.socials a:nth-child(6) {
-  animation-delay: 1.2s;
 }
 
 .socials a:hover {
   transform: scale(1.25);
 }
-
 
 .socials img {
   width: 20px;
@@ -166,32 +121,20 @@ transition: color 0.2s ease; /* Only color changes on hover */
 }
 
 .projects-btn {
-display: inline-block;
-padding: 0.75rem 1.5rem;
-background-color: #007bff;
-color: #fff;
-text-decoration: none;
-border-radius: 8px;
-font-weight: 500;
-transition: background-color 0.3s ease, transform 0.2s ease;
-margin-top: 1rem; /* <-- Add this line */
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0); /* Slide up to its position */
-  }
-}
-
-@keyframes fadeInButton {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem; /* <-- Add this line */
 }
 
 .projects-btn:hover {
-background-color: #0056b3;
-transform: translateY(-2px);
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
 footer {
@@ -202,23 +145,23 @@ footer {
   line-height: 10vh;
 }
 
-@keyframes bounce {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 999;
-  animation: bounce 2s infinite;
 }
 
 .whatsapp-float img {
   width: 50px;
   height: 50px;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {
