@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "title": "Began BSc Informatics at UNISA",
+        "date": "2023",
+        "description": "Embarked on my academic journey in Informatics, deepening my understanding of computing and its applications."
+    },
+    {
+        "id": "2",
+        "title": "Started Learning Web Development",
+        "date": "2024",
+        "description": "Dived into HTML, CSS, and JavaScript, focusing on backend development to build robust web applications."
+    },
+    {
+        "id": "3",
+        "title": "Founded 'Skye' Company Vision",
+        "date": "2024",
+        "description": "Conceived and began developing the mission for 'Skye', aimed at revolutionizing sustainable computing."
+    },
+    {
+        "id": "4",
+        "title": "First Public Beat Release",
+        "date": "2023",
+        "description": "Released my first collection of beats online, blending programming logic with musical creativity."
+    }
+]

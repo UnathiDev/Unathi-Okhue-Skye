@@ -1,0 +1,972 @@
+:root {
+    --primary-blue: #219ebc; /* A fresh, modern blue */
+    --secondary-blue: #8ecae6; /* A soft, airy blue */
+    --dark-blue: #023047; /* Deep, professional blue */
+    --accent-color: #ffb703; /* A warm, inviting yellow/orange for subtle accents */
+
+    --white: #ffffff;
+    --light-grey: #f8f9fa; /* Still good for background */
+    --medium-grey: #e9ecef; /* Slightly darker grey for subtle elements */
+    --dark-grey: #343a40; /* Strong text/heading color */
+    --text-color: #495057; /* Standard text color */
+    --border-color: #dee2e6;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-grey);
+    overflow-x: hidden; /* Prevent horizontal scroll due to animations/margins */
+}
+
+a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--dark-blue);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-grey);
+    margin-bottom: 0.5em;
+}
+
+/* Container for content within sections to control max-width */
+.container {
+    max-width: 1200px; /* Max width for content on desktop */
+    margin: 0 auto;
+    padding: 0 20px; /* Horizontal padding */
+}
+
+/* Splash Screen: Transparent overlay */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 48, 71, 0.7); /* Dark blue, 70% opaque */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    color: var(--white);
+    text-align: center;
+    animation: fadeOut 0.5s ease-out 2.5s forwards; /* Fades out after 2.5s (total 3s) */
+}
+
+.splash-content {
+    animation: fadeInScale 1s ease-out forwards;
+}
+
+.splash-logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+#splash-screen h1 {
+    color: var(--white);
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+#splash-screen p {
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+/* In style.css, add this at the very end or in a dedicated 'utilities' section */
+
+/* Custom Scrollbar Styles for WebKit browsers (Chrome, Safari, Edge, Opera) */
+
+/* Overall scrollbar width */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the vertical scrollbar */
+    height: 10px; /* Height of the horizontal scrollbar */
+}
+
+/* Track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: var(--light-grey); /* Light grey background for the track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+/* Thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+    background: var(--primary-blue); /* Primary blue for the thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    border: 2px solid var(--light-grey); /* A small border to make it stand out from the track */
+}
+
+/* Thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-blue); /* Darker blue on hover */
+}
+
+/* Corner (where vertical and horizontal scrollbars meet) */
+::-webkit-scrollbar-corner {
+    background: var(--light-grey); /* Match the track background */
+}
+
+/* Optional: For Firefox, though styling is more limited */
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-blue) var(--light-grey);
+} 
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; visibility: hidden; }
+}
+
+/* Header & Main Navigation */
+header {
+    background-color: var(--white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.main-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Constrain header content */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .logo {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+header .logo a {
+    color: var(--primary-blue);
+}
+
+/* Hamburger Menu Icon (for mobile) */
+.hamburger-menu {
+    display: none; /* Hidden by default on desktop */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--dark-grey); /* Color of the bars */
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animation for when menu is active */
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0; /* Middle bar disappears */
+}
+
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg); /* Top bar rotates to form X */
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg); /* Bottom bar rotates to form X */
+}
+
+/* Navigation Links Wrapper (desktop) */
+.nav-links-wrapper {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links-wrapper li {
+    margin-left: 30px;
+}
+
+.nav-links-wrapper .nav-link {
+    color: var(--dark-grey);
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-links-wrapper .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary-blue);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links-wrapper .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Sections - Full width background, content max-width controlled by .container */
+section {
+    padding: 80px 20px; /* Ample vertical padding */
+    text-align: center;
+    background-color: var(--white);
+    margin-bottom: 20px; /* Space between sections */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+section:nth-of-type(even) { /* Alternate background for better visual separation */
+    background-color: var(--light-grey);
+}
+
+/* Hero Section: Shorter padding and min-height */
+.hero-section {
+    padding: 60px 20px; /* Shorter top/bottom padding */
+    min-height: 40vh; /* Reduced minimum height */
+    background-image: linear-gradient(rgba(33, 158, 188, 0.8), rgba(2, 48, 71, 0.6)), url('images/hero-bg.jpg'); /* Using new colors */
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    margin-bottom: 0;
+    box-shadow: none;
+    text-align: center;
+}
+
+.hero-content {
+    /* Max width controlled by .container now */
+}
+
+.hero-section h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.hero-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    color: var(--white);
+    opacity: 0.9;
+}
+
+.hero-section p {
+    font-size: 1.1em;
+    max-width: 600px; /* Keep this for readability within hero */
+    margin: 0 auto 30px;
+    color: var(--white);
+    opacity: 0.9;
+}
+
+/* Profile Picture in Hero */
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--white);
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.primary-btn {
+    background-color: var(--white);
+    color: var(--primary-blue);
+    border: 2px solid var(--white);
+}
+
+.primary-btn:hover {
+    background-color: var(--secondary-blue);
+    border-color: var(--secondary-blue);
+    color: var(--white);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.secondary-btn:hover {
+    background-color: var(--white);
+    color: var(--primary-blue);
+}
+
+/* About Me Section (formerly home-tab) */
+.about-me-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-me-section p {
+    margin-bottom: 1.5em;
+    text-align: center; /* Center paragraph text */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Center skill items within their grid cells */
+}
+
+.skill-item {
+    background-color: var(--light-grey);
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    color: var(--dark-grey);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-3px);
+    background-color: var(--secondary-blue);
+    color: var(--white);
+}
+
+/* In style.css, or in a section related to your skills */
+.skill-item i {
+    margin-right: 8px; /* Adds space between the icon and the text */
+    color: var(--primary-blue); /* Optional: color your icons */
+}
+
+
+/* Projects Section */
+.projects-section {
+    padding-top: 80px; /* Ensure consistent padding */
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 50px auto 0;
+    text-align: left;
+}
+
+.project-item {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.project-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-item h3 {
+    color: var(--primary-blue);
+    font-size: 1.5em;
+    margin: 20px 20px 10px;
+}
+
+.project-item p {
+    padding: 0 20px 20px;
+    font-size: 0.95em;
+    color: var(--text-color);
+}
+
+.project-links {
+    padding: 0 20px 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.project-btn {
+    padding: 8px 15px;
+    font-size: 0.9em;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: 1px solid var(--primary-blue);
+}
+
+.project-btn:hover {
+    background-color: var(--dark-blue);
+    border-color: var(--dark-blue);
+}
+
+
+/* My Brand Section: Compact container with logo, name, description, and link */
+/* My Brand Section: Card-like Container */
+.brand-container {
+    max-width: 580px; /* Further reduced max-width for a compact card size */
+    margin: 30px auto;
+    padding: 25px; /* Reduced padding */
+    background-color: var(--white);
+    border-radius: 12px; /* Slightly more rounded corners for a card look */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* More prominent shadow for a "card" effect */
+    
+    display: flex;
+    flex-direction: column; /* Default to column on smaller screens */
+    align-items: center;
+    text-align: center;
+    gap: 18px; /* Slightly reduced space between logo and content */
+}
+
+.brand-logo {
+    max-width: 120px; /* Smaller logo on default/mobile for card feel */
+    height: auto;
+}
+
+.brand-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.brand-name {
+    font-size: 1.8em; /* Adjusted font size */
+    color: var(--dark-blue);
+    margin-bottom: 5px; /* Further reduced margin */
+}
+
+.brand-description {
+    font-size: 0.95em; /* Adjusted font size */
+    color: var(--text-color);
+    margin-bottom: 10px; /* Further reduced margin */
+    line-height: 1.5; /* Consistent line spacing */
+}
+
+.brand-link {
+    /* Inherits btn and primary-btn styles */
+    padding: 8px 18px; /* Slightly smaller button */
+    font-size: 0.9em;
+}
+
+/* Responsive adjustments for My Brand Section */
+@media (min-width: 992px) { /* Desktop/Larger Screens */
+    .brand-container {
+        flex-direction: row; /* Side-by-side layout */
+        text-align: left;
+        padding: 30px; /* Specific padding for desktop */
+        align-items: center; /* Vertically align items in the middle */
+        max-width: 650px; /* Adjusted max-width for desktop card */
+    }
+
+    .brand-logo {
+        flex-shrink: 0;
+        margin-right: 25px; /* Adjusted space between logo and content */
+        max-width: 140px; /* Adjusted logo size for desktop */
+    }
+
+    .brand-content {
+        align-items: flex-start; /* Align content left */
+        text-align: left;
+    }
+}
+
+/* Adjust for medium screens (e.g., tablets) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .brand-container {
+        padding: 20px; /* Adjusted padding */
+        max-width: 500px; /* Adjusted max-width */
+        gap: 15px; /* Adjusted gap */
+    }
+    .brand-name {
+        font-size: 1.7em;
+    }
+    .brand-description {
+        font-size: 0.9em;
+    }
+}
+
+/* Adjust for very small screens (e.g., small phones) */
+@media (max-width: 480px) {
+    .brand-container {
+        padding: 18px; /* Adjusted padding */
+        gap: 12px; /* Adjusted gap */
+    }
+    .brand-logo {
+        max-width: 80px; /* Smaller logo on small phones */
+    }
+    .brand-name {
+        font-size: 1.5em;
+    }
+    .brand-description {
+        font-size: 0.85em;
+    }
+    .brand-link {
+        padding: 6px 15px;
+        font-size: 0.85em;
+    }
+}
+
+/* Timeline Section */
+.timeline-container {
+    position: relative;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--secondary-blue);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    padding: 10px 0;
+    position: relative;
+    width: 50%;
+    background-color: inherit;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-dot {
+    height: 20px;
+    width: 20px;
+    background-color: var(--primary-blue);
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid var(--white);
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+    left: calc(100% - 10px); /* Adjust for dot positioning */
+    transform: translateX(-50%);
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -10px; /* Adjust for dot positioning */
+    transform: translateX(-50%);
+}
+
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: var(--white);
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: 60px; /* Space for the dot */
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-right: 60px; /* Space for the dot */
+}
+
+
+.timeline-date {
+    font-weight: bold;
+    color: var(--primary-blue);
+    position: absolute;
+    top: 20px;
+    font-size: 1.1em;
+}
+
+.timeline-item:nth-child(odd) .timeline-date {
+    right: 70px;
+    left: auto;
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+    left: 70px;
+    right: auto;
+}
+
+/* Contact Section - Updated Styles for Link Containers (Smaller & More Responsive) */
+.contact-info {
+    display: flex; /* Use flexbox to arrange email and phone containers */
+    flex-direction: column; /* Default to column layout for smaller screens (stacked) */
+    gap: 15px; /* Space between the two link containers */
+    margin-top: 30px; /* Space from the introductory paragraph */
+    align-items: center; /* Center items horizontally when in column layout */
+    justify-content: center; /* Center items when in row layout (on larger screens) */
+}
+
+.contact-link-container {
+    display: flex; /* Make content (icon & text) flex for alignment */
+    align-items: center; /* Vertically align icon and text */
+    justify-content: center; /* Center content horizontally */
+    background-color: var(--white); /* White background for the containers */
+    border: 2px solid var(--primary-blue); /* Blue border */
+    border-radius: 8px; /* Slightly less rounded for a more compact look */
+    padding: 12px 20px; /* Reduced padding for a smaller container */
+    max-width: 320px; /* Reduced max width for the container */
+    width: 100%; /* Take full available width within its flex container */
+    color: var(--dark-grey); /* Text color */
+    font-size: 1em; /* Reduced font size */
+    font-weight: 500;
+    text-decoration: none; /* Remove default underline from link */
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Slightly lighter shadow */
+}
+
+.contact-link-container:hover {
+    background-color: var(--primary-blue); /* Primary blue background on hover */
+    color: var(--white); /* White text on hover */
+    transform: translateY(-1px); /* Slightly less lift effect on hover */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+    border-color: var(--dark-blue); /* Darker blue border on hover */
+}
+
+.contact-link-container i {
+    margin-right: 10px; /* Reduced space between icon and text */
+    font-size: 1.3em; /* Reduced icon size */
+    color: var(--primary-blue); /* Default icon color */
+    transition: color 0.3s ease; /* Smooth transition for icon color */
+}
+
+.contact-link-container:hover i {
+    color: var(--white); /* White icon on hover */
+}
+
+/* Responsive adjustment for contact-info: Side-by-side on larger screens */
+@media (min-width: 768px) {
+    .contact-info {
+        flex-direction: row; /* Change to row layout on screens wider than 768px */
+        flex-wrap: wrap; /* Allow items to wrap to the next line if space is limited */
+        justify-content: center; /* Center the items in the row */
+        gap: 20px; /* Space between items in row layout */
+    }
+
+    .contact-link-container {
+        flex-grow: 0; /* Prevent containers from growing too much */
+        flex-shrink: 1; /* Allow them to shrink */
+        width: auto; /* Let width be determined by content + padding */
+        min-width: 180px; /* Provide a minimum width for desktop readability */
+        max-width: 45%; /* Keep max-width for two items per row */
+    }
+}
+
+/* Further adjustments for very small screens (e.g., small phones) */
+@media (max-width: 480px) {
+    .contact-info {
+        gap: 10px; /* Even smaller gap on very small screens */
+    }
+    .contact-link-container {
+        padding: 10px 15px; /* Even smaller padding */
+        font-size: 0.9em; /* Even smaller font size */
+        max-width: 100%; /* Ensure it takes full width of parent */
+        min-width: unset; /* Allow it to shrink completely to fit content */
+    }
+    .contact-link-container i {
+        font-size: 1.1em; /* Adjust icon size for very small screens */
+    }
+}
+
+/* Ensure the social links below maintain their original styling */
+/* Updated Social Links Styling */
+.social-links {
+    margin-top: 40px; /* Keep consistent margin from contact containers */
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Space between social icons */
+    flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
+}
+
+.social-links a {
+    display: flex; /* Make the anchor a flex container */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    width: 65px; /* Set a fixed width for the circular/square clickable area */
+    height: 65px; /* Set a fixed height (adjust as needed for desired size) */
+    border-radius: 50%; /* Make it circular */
+    background-color: var(--white); /* White background for the circle */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+.social-links a:hover {
+    background-color: var(--primary-blue); /* Change background on hover */
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* Stronger shadow */
+}
+
+/* Styling the image (SVG icon) inside the social link container */
+.social-links a img {
+    max-width: 60%; /* Image takes 60% of its parent's (the <a> tag's) width */
+    max-height: 60%; /* Image takes 60% of its parent's (the <a> tag's) height */
+    height: auto; /* Maintain aspect ratio */
+    filter: brightness(0.8); /* Slightly dim the icon by default for contrast */
+    transition: filter 0.3s ease; /* Smooth transition for icon color change */
+}
+
+.social-links a:hover img {
+    filter: brightness(100%) invert(100%); /* Make icon white on hover (for dark icons on white background) */
+    
+}
+
+/* Responsive adjustment for very small screens */
+@media (max-width: 480px) {
+    .social-links a {
+        width: 55px; /* Smaller size on very small screens */
+        height: 55px;
+    }
+}
+
+.share-button {
+    margin-top: 40px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-blue); /* Using new dark blue */
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust Hero */
+    .hero-section {
+        padding: 40px 20px; /* Even less padding on smaller screens */
+    }
+    .hero-section h1 {
+        font-size: 2em; /* Smaller font for smaller screens */
+    }
+    .hero-section h2 {
+        font-size: 1.2em; /* Smaller font for smaller screens */
+    }
+    .hero-section p {
+        font-size: 0.9em; /* Smaller font for smaller screens */
+    }
+
+    /* Adjust Buttons */
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+        margin: 5px;
+    }
+
+    /* Header & Navigation for Mobile */
+    .main-nav-container {
+        flex-wrap: wrap; /* Allow items to wrap */
+        justify-content: space-between; /* Keep logo left, hamburger right */
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show hamburger on mobile */
+    }
+
+    .nav-links-wrapper {
+        display: none; /* Hide nav links by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Below header */
+        left: 0;
+        background-color: var(--white);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        padding: 20px 0;
+        z-index: 998;
+        animation: slideDown 0.3s ease-out forwards;
+    }
+
+    .nav-links-wrapper.active {
+        display: flex; /* Show when active */
+    }
+
+    .nav-links-wrapper li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .nav-links-wrapper .nav-link {
+        padding: 10px 0;
+        display: block; /* Make links full width for easier tapping */
+    }
+
+    .nav-links-wrapper .nav-link::after {
+        display: none; /* Remove hover underline on mobile menu */
+    }
+
+    /* Adjust content within sections */
+    section {
+        padding: 60px 20px; /* Slightly less padding on mobile sections */
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+
+    /* Timeline Section - Mobile Responsiveness Fixes */
+    .timeline-container::after {
+        left: 20px; /* Main vertical line moves to the left */
+        margin-left: 0;
+    }
+
+    .timeline-item {
+        width: 100% !important; /* Force full width */
+        padding: 10px 0 !important; /* Keep original vertical padding, reset horizontal */
+        left: 0 !important; /* Force align all items to the left */
+        transform: none !important; /* Ensure no residual transform interferes */
+        margin: 0 !important; /* Reset any potential margins */
+    }
+
+    /* Ensure even-numbered items also shift correctly to the left */
+    .timeline-item:nth-child(even) {
+        left: 0 !important;
+    }
+
+    /* Position all dots consistently on the left line */
+    .timeline-item .timeline-dot {
+        left: 20px !important; /* Align with the vertical line */
+        transform: translateX(-50%) !important; /* Keep it centered on its own axis */
+        top: 20px !important; /* Align with the content block's top */
+    }
+
+    /* Explicitly override odd/even dot positioning for mobile */
+    .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 20px !important; /* Override to ensure all dots are on the left */
+        transform: translateX(-50%) !important;
+    }
+
+    .timeline-content {
+        padding: 20px 30px !important; /* General padding for content block */
+        margin-left: 60px !important; /* Space for the dot and line */
+        margin-right: 0 !important; /* Ensure no right margin */
+        text-align: left !important; /* Content text aligns left */
+        padding-top: 40px !important; /* Push content down to make space for the date */
+    }
+
+    /* Position the date inside the content block, above content */
+    .timeline-date {
+        position: absolute !important; /* Keep it absolute for precise positioning */
+        left: 60px !important; /* Align with the content block's left edge (after dot/line) */
+        top: 0px !important; /* Place it at the very top of the content block */
+        font-size: 0.9em !important; /* Slightly smaller font for date */
+        color: var(--primary-blue) !important; /* Ensure color is visible */
+        font-weight: bold !important;
+        padding-top: 10px !important; /* Add some padding to push content down */
+    }
+
+    /* Remove specific odd/even date positioning for mobile */
+    .timeline-item:nth-child(odd) .timeline-date,
+    .timeline-item:nth-child(even) .timeline-date {
+        left: 60px !important; /* Override to ensure all dates are on the left */
+        right: auto !important;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Smaller skill items */
+    }
+
+    /* Responsive adjustments for brand container */
+    .brand-container {
+        padding: 30px 20px;
+        margin: 20px auto;
+    }
+    .brand-logo {
+        max-width: 150px;
+    }
+    .brand-name {
+        font-size: 1.8em;
+    }
+    .brand-description {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .hero-section h2 {
+        font-size: 1.2em;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Keyframe for mobile menu slide-down */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

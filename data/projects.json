@@ -1,0 +1,42 @@
+[
+    {
+        "id": "1",
+        "title": "Library Management System",
+        "year": "2024",
+        "status": "Completed",
+        "description": "A comprehensive system developed to streamline library operations, including book cataloging, member management, borrowing, and returns. Features a user-friendly interface for librarians and a robust backend for data handling.",
+        "languageIcons": ["fab fa-java", "fab fa-html5", "fab fa-css3-alt", "fab fa-js"],
+        "githubLink": "https://github.com/yourprofile/library-management-system",
+        "liveDemoLink": ""
+    },
+    {
+        "id": "2",
+        "title": "School Management System",
+        "year": "2025",
+        "status": "In Development",
+        "description": "An ongoing project to build an integrated school management platform. It aims to facilitate student enrollment, grade tracking, attendance management, and communication between teachers, students, and parents. Focus is on scalability and ease of use.",
+        "languageIcons": ["fab fa-python", "fab fa-js-square", "fab fa-html5", "fab fa-css3-alt"],
+        "githubLink": "https://github.com/yourprofile/school-management-system",
+        "liveDemoLink": ""
+    },
+    {
+        "id": "3",
+        "title": "Sustainable Data Analyzer",
+        "year": "2025",
+        "status": "In Development",
+        "description": "A Python application designed to analyze energy consumption patterns of computing tasks, aiming to suggest more sustainable algorithms and hardware configurations. This aligns with my passion for sustainable technology.",
+        "languageIcons": ["fab fa-python", "fab fa-r-project"],
+        "githubLink": "https://github.com/yourprofile/sustainable-data-analyzer",
+        "liveDemoLink": ""
+    },
+    {
+        "id": "4",
+        "title": "Poetry Generator API",
+        "year": "2024",
+        "status": "Active",
+        "description": "A Java Spring Boot backend API that generates short poetic verses based on user-provided keywords, exploring creative applications of programming and my love for poetry.",
+        "languageIcons": ["fab fa-java"],
+        "githubLink": "https://github.com/yourprofile/poetry-api",
+        "liveDemoLink": "https://your.api.demo/poetry"
+    }
+]

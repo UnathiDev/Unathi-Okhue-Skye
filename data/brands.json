@@ -1,0 +1,20 @@
+[
+    {
+        "id": "skye",
+        "name": "Skye",
+        "profilePicture": "https://via.placeholder.com/150x150?text=Skye+PFP",
+        "websiteLink": "https://skye.com",
+        "status": "In Development",
+        "description": "Skye is my flagship venture dedicated to pioneering sustainable computing solutions. We aim to integrate energy-efficient practices and eco-friendly technologies into every layer of digital infrastructure, from software optimization to hardware design.",
+        "vision": "To redefine how technology impacts our planet, ensuring innovation aligns with ecological responsibility and fosters a greener digital future for all."
+    },
+    {
+        "id": "rhythmforge",
+        "name": "RhythmForge Beats",
+        "profilePicture": "https://via.placeholder.com/150x150?text=RF+PFP",
+        "websiteLink": "https://rhythmforge.com",
+        "status": "Active",
+        "description": "RhythmForge Beats is my creative outlet for producing instrumental music and beats. It's where my passion for rhythm and melody meets my technical skills, often exploring algorithmic composition and digital sound design. This brand represents the intersection of my artistic and programming pursuits.",
+        "vision": "To create a harmonious blend of technology and artistry, producing innovative soundscapes that inspire and push the boundaries of digital music production."
+    }
+]
