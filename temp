@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unathi Okhue | Sustainable Computing Programmer</title>
+
+    <meta name="description" content="Unathi's programmer portfolio, specializing in sustainable computing, Java, Python, C++ and web development. UNISA BSc Informatics student.">
+    <meta name="keywords" content="programmer, developer, Java, Python, C++, web development, HTML, CSS, JavaScript, backend, sustainable computing, UNISA, informatics, portfolio">
+    <meta name="author" content="Unathi Okhue">
+    
+    <link rel="canonical" href="https://unathidev.github.io/Unathi-Okhue-Skye/"> 
+    <meta property="og:title" content="Unathi Okhue | Sustainable Computing Programmer Portfolio">
+    <meta property="og:description" content="Explore my projects in sustainable computing, Java, Python, C++ and web development. Let's build a greener digital future.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://unathidev.github.io/Unathi-Okhue-Skye/"> 
+    <meta property="og:image" content="https://unathidev.github.io/Unathi-Okhue-Skye/images/UnathiOkhueProfilePic2.jpg"> 
+    <meta property="og:image:alt" content="Unathi Okhue - Sustainable Computing">
+    <meta property="og:site_name" content="Unathi's Portfolio">
+    <meta property="og:locale" content="en_US">
+    
+
+    <meta name="copyright" content="Unathi Okhue">
+    <meta name="language" content="English">
+    <meta name="theme-color" content="#219ebc">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@novaero"> 
+    <meta name="twitter:creator" content="@novaero"> 
+    <meta name="twitter:title" content="Unathi | Sustainable Computing Programmer Portfolio">
+    <meta name="twitter:description" content="Building a greener digital future with sustainable computing and robust code. Check out my portfolio!">
+    <meta name="twitter:image" content="https://unathidev.github.io/Unathi-Okhue-Skye/images/UnathiOkhueProfilePic2.jpg"> 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+    <div id="splash-screen">
+        <div class="splash-content">
+            <img src="images/UnathiOkhueProfilePic2.jpg" alt="Skye Logo" class="splash-logo"> 
+            <h1>Unathi Okhue</h1>
+            <p>Sustainable Computing. Unseen Before.</p>
+        </div>
+    </div>
+
+    <div id="main-content" style="display: none;">
+        <header>
+            <nav class="main-nav-container">
+                <div class="logo"><a href="#hero">Unathi Okhue</a></div>
+                <button class="hamburger-menu" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <ul class="nav-links-wrapper">
+                    <li><a href="#hero" class="nav-link">Home</a></li>
+                    <li><a href="#about-me" class="nav-link">About Me</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#brand" class="nav-link">Skye</a></li>
+                    <li><a href="#timeline" class="nav-link">Timeline</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="hero" class="hero-section">
+                <div class="hero-content container"> <img src="images/UnathiOkhueProfilePic2.jpg" alt="Unathi Okhue Profile Picture" class="profile-pic"> <h1>Hi, I'm Unathi Okhue</h1>
+                    <h2>A Sustainable Computing Programmer & UNISA Informatics Student</h2>
+                    <p>Building innovative solutions with Java, Python, C++ and a focus on backend web development, driven by a passion for a greener digital future.</p>
+                    <a href="#projects" class="btn primary-btn scroll-to-section">Explore My Work</a>
+                    <a href="#contact" class="btn secondary-btn scroll-to-section">Get In Touch</a>
+                </div>
+            </section>
+
+            <section id="about-me" class="about-me-section">
+                <div class="container">
+                    <h2>Welcome to My Digital Home</h2>
+                    <p>I'm a programmer with a profound passion for <strong>sustainable technology</strong> and a BSc Informatics student at UNISA. My journey combines technical prowess in Java, Python, and C++. Through <strong>Skye</strong>, my company, I'm pioneering computing solutions that are efficient, ethical and built for a greener future.</p>
+                    <p>This unique blend of skills allows me to approach problems with both logical precision and innovative thought, whether I'm crafting robust backend systems or expressing ideas through code and verse. I believe in technology that serves humanity and the planet.</p>
+                    <h3>My Core Skills:</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fab fa-java"></i> Java</div>
+                        <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+                        <div class="skill-item"><i class="fas fa-code"></i> C++</div>
+                        <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
+                        <div class="skill-item"><i class="fas fa-brain"></i> Creative Thinking</div>
+                        <div class="skill-item"><i class="fas fa-lightbulb"></i> Problem Solving</div> 
+                </div>
+            </section>
+
+            <section id="projects" class="projects-section">
+                <div class="container">
+                    <h2>My Projects</h2>
+                    <div class="project-grid">
+                        <div class="project-item">
+                            <h3>Library Managent System</h3>
+                            <p>A library management system designed to streamline book lending, returns, and inventory. This project demonstrates my proficiency in integrating databases for managing complex data relationships and providing an intuitive system for resource allocation and user tracking.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/UnathiDev/Library-Management-System" target="_blank" class="btn project-btn">GitHub Repo</a>
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <h3>School Management System</h3>
+                            <p>A school management system that handles operations that would typically take place in a school. This project showcases my ability to integrate databases with a robust backend application, ensuring efficient and secure management of academic and administrative data. </p>
+                            <div class="project-links">
+                                <a href="https://github.com/UnathiDev/School-Management-System" target="_blank" class="btn project-btn">GitHub Repo</a>
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <h3>Registration App</h3>
+                            <p>A simple Python registration app. This project showcases my ability to create user-friendly applications with a focus on backend functionality.</p>
+                            <div class="project-links"></div>
+                                <a href="https://github.com/UnathiDev/Python-Registration-App" target="_blank" class="btn project-btn">GitHub Repo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="brand" class="brand-section">
+                <div class="container">
+                    <h2>My Brand: Skye - Sustainable Computing</h2>
+                    <div class="brand-container">
+                        <img src="images/SkyeLogo.jpeg" alt="Skye Company Logo" class="brand-logo">
+                        <div class="brand-content"> <h3 class="brand-name">Skye</h3>
+                            <p class="brand-description">
+                                At the heart of my work is <strong>Skye</strong>, my company dedicated to pioneering <strong>sustainable computing like never seen before</strong>. Skye's mission is to develop software and systems that are not just powerful, but also energy-efficient, resource-optimized and built for longevity.
+                            </p>
+                            <a href="https://jazzy-torte-3adf7a.netlify.app" target="_blank" class="btn primary-btn brand-link">Visit Skye's Website</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="timeline" class="timeline-section">
+                <div class="container">
+                    <h2>My Journey</h2>
+                    <div class="timeline-container">
+
+                       <div class="timeline-item">
+                           <div class="timeline-dot"></div>
+                           <div class="timeline-date">2024</div>
+                            <div class="timeline-content">
+                                <h3>Began BSc in Informatics at UNISA</h3>
+                                <p>Embarked on my academic path, starting my Bachelor of Science in Informatics degree at UNISA.</p>
+                            </div>
+                        </div>
+            
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2024</div>
+                            <div class="timeline-content">
+                                <h3>Completed Foundational Modules</h3>
+                                <p>Successfully completed foundational modules in programming and computer systems, building a solid base in IT.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2024</div>
+                            <div class="timeline-content">
+                                <h3>Created First Portfolio Projects</h3>
+                                <p>Developed initial portfolio projects including a **Library System**, **School System**, and a **Student App**, applying practical programming skills.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2025 (Present)</div>
+                            <div class="timeline-content">
+                                <h3>Began Second Year of Informatics</h3>
+                                <p>Commenced my second year of the BSc in Informatics at UNISA, diving deeper into advanced topics.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2025 (Present)</div>
+                            <div class="timeline-content">
+                                <h3>Building Skye — AI & Sustainability Tech Brand</h3>
+                                <p>Actively developing **Skye**, my tech brand focused on pioneering solutions in **Artificial Intelligence** and **sustainable computing**.</p>
+                            </div>
+                        </div>
+                    
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2025 (Present)</div>
+                            <div class="timeline-content">
+                                <h3>Working on New Portfolio Projects</h3>
+                                <p>Currently engaged in developing two new, impactful portfolio projects to further showcase my programming expertise.</p>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="contact-section">
+                <div class="container">
+                    <h2>Get In Touch</h2>
+                    <p>I'm always open to discussing new projects, creative ideas or opportunities to make technology more sustainable.</p>
+                    <div class="contact-info">
+                        <a href="mailto:uokhue77@gmail.com" class="contact-link-container">
+                            <i class="fas fa-envelope"></i> <span>uokhue77@gmail.com</span> 
+                        </a>
+
+                        <a href="tel:+27710480425" class="contact-link-container">
+                            <i class="fas fa-phone-alt"></i> <span>+27 71 048 0425</span> 
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/UnathiDev" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/unathiokhue?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/aero_unstar?t=XVhGEDkdQ36KwkOTIfLcew&s=09" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/share/18epNfArTz/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/novaero7?igsh=MWptY3ZlMTRqM2h2YQ==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <button id="shareSiteBtn" class="btn primary-btn share-button"><i class="fas fa-share-alt"></i> Share This Site</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Unathi Okhue | All rights reserved.<br>
+                Built with passion for sustainable computing.</p>
+        </footer>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

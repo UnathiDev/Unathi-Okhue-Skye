@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unathi Okhue | Projects Portfolio</title>
+    <meta name="description" content="Explore Unathi Okhue's programming projects, including sustainable computing solutions, backend development, and AI applications.">
+    <meta name="keywords" content="programming projects, sustainable technology, backend development, Java projects, Python projects, C++ projects, AI projects, portfolio, software development">
+    <meta name="author" content="Unathi Okhue">
+
+    <!-- Google Fonts: Poppins, Inter, Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Nunito:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN for Icons -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Link to your shared CSS file -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon (optional, create your own and link it) -->
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+</head>
+<body>
+
+    <nav class="main-nav" id="main-nav">
+        <a href="index.html" class="nav-logo">Unathi Okhue</a>
+        <button class="menu-toggle" aria-label="Toggle navigation menu" id="menu-toggle">☰</button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="projects.html" class="nav-link active">Projects</a></li>
+            <li><a href="skye.html" class="nav-link">Skye</a></li>
+            <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+        </ul>
+    </nav>
+
+    <section id="projects" class="projects-section page-section">
+        <div class="container">
+            <h2>My Projects</h2>
+            <p class="section-intro">Here are some of my key projects, reflecting my skills in backend development, sustainable tech, and various programming languages.</p>
+            <div class="project-grid">
+
+                <div class="glass-card project-card">
+                    <img src="images/SkyeLogo.jpeg" alt="Library Management System" class="project-card-image">
+                    <h3>Library Management System</h3>
+                    <p class="project-brief">A system to streamline book lending, returns, and inventory, demonstrating database integration for complex data relationships.</p>
+                    <div class="tags">
+                        <span class="highlight-tag"><i class="fab fa-java icon-spacing"></i> Java</span>
+                        <span class="highlight-tag"><i class="fas fa-database icon-spacing"></i> Databases</span>
+                        <span class="highlight-tag"><i class="fas fa-server icon-spacing"></i> Backend</span>
+                    </div>
+                    <button class="btn-primary btn-small project-learn-more-btn" data-project-id="library-system">Learn More</button>
+                </div>
+
+                <div class="glass-card project-card">
+                    <img src="images/SkyeLogo.jpeg" alt="School Management System" class="project-card-image">
+                    <h3>School Management System</h3>
+                    <p class="project-brief">Manages typical school operations, showcasing robust backend application with efficient and secure academic/administrative data management.</p>
+                    <div class="tags">
+                        <span class="highlight-tag"><i class="fab fa-java icon-spacing"></i> Java</span>
+                        <span class="highlight-tag"><i class="fas fa-database icon-spacing"></i> Databases</span>
+                        <span class="highlight-tag"><i class="fas fa-server icon-spacing"></i> Backend</span>
+                    </div>
+                    <button class="btn-primary btn-small project-learn-more-btn" data-project-id="school-system">Learn More</button>
+                </div>
+
+                <div class="glass-card project-card">
+                    <img src="images/SkyeLogo.jpeg" alt="Python Registration App" class="project-card-image">
+                    <h3>Python Registration App</h3>
+                    <p class="project-brief">A simple user-friendly Python registration app, focusing on solid backend functionality.</p>
+                    <div class="tags">
+                        <span class="highlight-tag"><i class="fab fa-python icon-spacing"></i> Python</span>
+                        <span class="highlight-tag"><i class="fas fa-server icon-spacing"></i> Backend</span>
+                        <span class="highlight-tag"><i class="fas fa-terminal icon-spacing"></i> CLI</span>
+                    </div>
+                    <button class="btn-primary btn-small project-learn-more-btn" data-project-id="registration-app">Learn More</button>
+                </div>
+
+                </div>
+        </div>
+    </section>
+
+    <div id="project-modals" class="modals-container">
+
+        <div id="library-system-modal" class="modal glass-card">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h3>Library Management System</h3>
+                <p>This comprehensive <strong>Library Management System</strong> is built using <strong>Java</strong> for the backend logic and connects to a <strong>SQL database</strong> (JDBC) for efficient data storage and retrieval. It supports essential library operations such as adding, deleting and updating books, managing member registrations, tracking book loans and returns and handling overdue notifications.</p>
+                <p>The system features a robust <strong>backend architecture</strong> ensuring data integrity and security. Its modular design allows for easy scalability and integration with other systems. This project highlights my ability to design and implement complex data models, build secure and efficient database interactions and develop a fully functional application from the ground up, providing a streamlined experience for both librarians and patrons.</p>
+                <div class="modal-tags tags">
+                    <span class="highlight-tag"><i class="fab fa-java icon-spacing"></i> Java</span>
+                    <span class="highlight-tag"><i class="fas fa-database icon-spacing"></i> SQL Database</span>
+                    <span class="highlight-tag"><i class="fas fa-server icon-spacing"></i> Backend</span>
+                    <span class="highlight-tag"><i class="fas fa-cogs icon-spacing"></i> OOP</span>
+                </div>
+                <div class="modal-links">
+                    <a href="https://github.com/UnathiDev/Library-Management-System" target="_blank" class="btn btn-secondary"><i class="fab fa-github icon-spacing"></i> View on GitHub</a>
+                    </div>
+            </div>
+        </div>
+
+        <div id="school-system-modal" class="modal glass-card">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h3>School Management System</h3>
+                <p>The <strong>School Management System</strong> is a powerful <strong>Java-based</strong> application designed to automate and manage core academic and administrative operations within an educational institution. It integrates seamlessly with a <strong>relational database</strong> (e.g., JDBC) to handle student records, faculty information, course management, attendance tracking, grading, and scheduling.</p>
+                <p>This project demonstrates advanced <strong>backend development</strong> skills, including API design, data validation, authentication mechanisms and robust error handling. The system's architecture prioritizes efficiency, scalability, and data security, ensuring confidential information is protected. It aims to reduce manual workload, improve administrative efficiency, and provide a centralized platform for school management, showcasing my ability to build comprehensive enterprise-level applications.</p>
+                <div class="modal-tags tags">
+                    <span class="highlight-tag"><i class="fab fa-java icon-spacing"></i> Java</span>
+                    <span class="highlight-tag"><i class="fas fa-database icon-spacing"></i> SQL Database</span>
+                    <span class="highlight-tag"><i class="fas fa-server icon-spacing"></i> Backend</span>
+                    <span class="highlight-tag"><i class="fas fa-lock icon-spacing"></i> Security</span>
+                    <span class="highlight-tag"><i class="fas fa-project-diagram icon-spacing"></i> System Design</span>
+                </div>
+                <div class="modal-links">
+                    <a href="https://github.com/UnathiDev/School-Management-System" target="_blank" class="btn btn-secondary"><i class="fab fa-github icon-spacing"></i> View on GitHub</a>
+                    </div>
+            </div>
+        </div>
+
+        <div id="registration-app-modal" class="modal glass-card">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h3>Python Registration App</h3>
+                <p>This <strong>simple Python Registration App</strong> serves as a clear demonstration of core <strong>backend development principles</strong> and efficient data handling. The application allows users to register, log in and manage their basic profile information. It utilizes Python for its clean and efficient logic, connecting to a local file system or a lightweight database (SQLite) for persistence.</p>
+                <p>Key features include user input validation, password hashing for security (using libraries like `bcrypt` or `hashlib`) and basic CRUD (Create, Read, Update, Delete) operations. This project underscores my ability to write clean, functional backend code, manage user data securely and build command-line interface (CLI) applications that are robust and easy to use. It's a foundational project that showcases essential skills for any backend developer.</p>
+                <div class="modal-tags tags">
+                    <span class="highlight-tag"><i class="fab fa-python icon-spacing"></i> Python</span>
+                    <span class="highlight-tag"><i class="fas fa-server icon-spacing"></i> Backend Logic</span>
+                    <span class="highlight-tag"><i class="fas fa-database icon-spacing"></i> Data Storage</span>
+                    <span class="highlight-tag"><i class="fas fa-lock icon-spacing"></i> Security Basics</span>
+                </div>
+                <div class="modal-links">
+                    <a href="https://github.com/UnathiDev/Python-Registration-App" target="_blank" class="btn btn-secondary"><i class="fab fa-github icon-spacing"></i> View on GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Unathi Okhue. All rights reserved. Built with ❤️ and Code.</p>
+    </footer>
+
+    <!-- Link to your shared JavaScript file -->
+    <script src="index.js"></script>
+</body>
+</html>
