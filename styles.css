@@ -1443,3 +1443,131 @@ footer {
         right: 15px;
     }
 }
+
+/* New styles for individual project pages */
+.project-detail-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.project-detail-section {
+    padding-top: calc(var(--spacing-xl) + 80px); /* Adjust for fixed nav */
+    padding-bottom: var(--spacing-xl);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align content to top within section */
+    flex-grow: 1; /* Allow section to grow and push footer down */
+    text-align: left; /* Default text alignment */
+}
+
+.project-detail-container {
+    max-width: 900px;
+    width: 100%;
+    padding: var(--spacing-lg);
+    position: relative; /* For back button positioning */
+    margin-top: var(--spacing-md); /* Give some space below nav */
+    margin-bottom: var(--spacing-md); /* Space before footer */
+}
+
+.back-button {
+    position: absolute;
+    top: var(--spacing-md);
+    left: var(--spacing-md);
+    z-index: 10;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.project-detail-title {
+    color: var(--color-accent-blue);
+    margin-top: var(--spacing-xl); /* Space below back button */
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.project-detail-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Limit image height */
+    object-fit: contain; /* Ensure image fits without cropping */
+    border-radius: 8px;
+    margin-bottom: var(--spacing-lg);
+    border: 1px solid var(--color-border);
+    display: block; /* Remove extra space below image */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-detail-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-primary);
+}
+
+.project-detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    justify-content: center; /* Center tags */
+}
+
+.project-detail-links {
+    text-align: center;
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Responsive adjustments for project detail pages */
+@media (max-width: 767px) {
+    .project-detail-container {
+        padding: var(--spacing-md);
+        margin-top: var(--spacing-sm);
+        margin-bottom: var(--spacing-sm);
+    }
+    .back-button {
+        top: var(--spacing-sm);
+        left: var(--spacing-sm);
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    .project-detail-title {
+        font-size: clamp(1.8rem, 6vw, 2.2rem);
+        margin-top: var(--spacing-lg);
+        margin-bottom: var(--spacing-md);
+    }
+    .project-detail-image {
+        max-height: 250px;
+        margin-bottom: var(--spacing-md);
+    }
+    .project-detail-description {
+        font-size: 1rem;
+        margin-bottom: var(--spacing-md);
+    }
+    .project-detail-tags {
+        gap: var(--spacing-xs);
+        margin-top: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+    .project-detail-links .btn-primary {
+        width: 100%;
+        margin-bottom: var(--spacing-sm);
+    }
+}
+
+@media (min-width: 768px) {
+    .project-detail-container {
+        padding: var(--spacing-xl);
+    }
+    .back-button {
+        top: var(--spacing-lg);
+        left: var(--spacing-lg);
+    }
+    .project-detail-title {
+        margin-top: var(--spacing-lg);
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unathi Okhue | School Management System</title>
+    <meta name="description" content="Detailed overview of the School Management System, a powerful Java-based application designed to automate and manage core academic and administrative operations with relational database integration.">
+    <meta name="keywords" content="School Management System, Java, relational database, JDBC, backend development, API design, data validation, authentication, error handling, enterprise applications, Unathi Okhue projects">
+    <meta name="author" content="Unathi Okhue">
+
+    <!-- Google Fonts: Poppins, Inter, Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Nunito:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link to your shared CSS file -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="project-detail-body">
+    <nav class="main-nav" id="main-nav">
+        <a href="../index.html" class="nav-logo">Unathi Okhue</a>
+        <button class="menu-toggle" aria-label="Toggle navigation menu" id="menu-toggle">☰</button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+            <li><a href="../skye.html" class="nav-link">Skye</a></li>
+            <li><a href="../timeline.html" class="nav-link">Timeline</a></li>
+        </ul>
+    </nav>
+
+    <main class="project-detail-section page-section">
+        <div class="container project-detail-container glass-card">
+            <a href="../projects.html" class="back-button btn-primary btn-small"><i class="fas fa-arrow-left icon-spacing"></i> Back to Projects</a>
+            
+            <h1 class="project-detail-title">School Management System</h1>
+            
+            <p class="project-detail-description">
+                The <strong>School Management System</strong> is a powerful <strong>Java-based</strong> application designed to automate and manage core academic and administrative operations within an educational institution. It integrates seamlessly with a <strong>relational database</strong> (e.g., JDBC) to handle student records, educator records and school related information.
+            </p>
+            <p class="project-detail-description">
+                This project demonstrates advanced <strong>backend development</strong> skills, including API design, data validation, authentication mechanisms and robust error handling. The system's architecture prioritizes efficiency, scalability and data security, ensuring confidential information is protected. It aims to reduce manual workload, improve administrative efficiency and provide a centralized platform for school management, showcasing my ability to build comprehensive enterprise-level applications.
+            </p>
+
+            <div class="project-detail-tags tags">
+                <span class="highlight-tag"><i class="fab fa-java icon-spacing"></i> Java</span>
+                <span class="highlight-tag"><i class="fas fa-database icon-spacing"></i> SQL Database</span>
+                <span class="highlight-tag"><i class="fas fa-server icon-spacing"></i> Backend</span>
+                <span class="highlight-tag"><i class="fas fa-lock icon-spacing"></i> Security</span>
+                <span class="highlight-tag"><i class="fas fa-project-diagram icon-spacing"></i> System Design</span>
+            </div>
+
+            <div class="project-detail-links">
+                <a href="https://github.com/UnathiDev/School-Management-System" target="_blank" class="btn-primary"><i class="fab fa-github icon-spacing"></i> View on GitHub</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Unathi Okhue. All rights reserved. Built with ❤️ and Code.</p>
+    </footer>
+
+    <!-- Link to your shared JavaScript file for mobile menu toggle -->
+    <script src="../index.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

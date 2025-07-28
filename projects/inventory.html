@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unathi Okhue | Skye Inventory System</title>
+    <meta name="description" content="Detailed overview of the Skye Inventory System, a Python PyQt5 desktop application with SQLite database management for efficient inventory control and user management.">
+    <meta name="keywords" content="Skye Inventory System, Python, PyQt5, SQLite, desktop application, inventory management, user management, backend development, sustainable computing, Unathi Okhue projects">
+    <meta name="author" content="Unathi Okhue">
+
+    <!-- Google Fonts: Poppins, Inter, Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Nunito:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link to your shared CSS file -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="project-detail-body">
+    <nav class="main-nav" id="main-nav">
+        <a href="../index.html" class="nav-logo">Unathi Okhue</a>
+        <button class="menu-toggle" aria-label="Toggle navigation menu" id="menu-toggle">☰</button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="../projects.html" class="nav-link active">Projects</a></li>
+            <li><a href="../skye.html" class="nav-link">Skye</a></li>
+            <li><a href="../timeline.html" class="nav-link">Timeline</a></li>
+        </ul>
+    </nav>
+
+    <!-- ADD THE 'active' CLASS HERE -->
+    <main class="project-detail-section page-section active">
+        <div class="container project-detail-container glass-card">
+            <a href="../projects.html" class="back-button btn-primary btn-small"><i class="fas fa-arrow-left icon-spacing"></i> Back to Projects</a>
+            
+            <h1 class="project-detail-title">Inventory Management System</h1>
+            
+            <p class="project-detail-description">
+                This <strong>Inventory System</strong> is a robust desktop application built with <strong>Python</strong> and its powerful <strong>PyQt5</strong> framework for the graphical user interface. It leverages <strong>SQLite</strong> as a lightweight and efficient database solution for seamless data management.
+            </p>
+            <p class="project-detail-description">
+                The system provides comprehensive functionalities for inventory control, including adding new items, viewing and searching existing stock, updating item details and managing user accounts with distinct roles. As a UNISA student passionate about sustainable technology and backend development, this project showcases my ability to develop a full-featured application, integrate database solutions and create intuitive user interfaces, ensuring efficient and reliable inventory operations.
+            </p>
+
+            <div class="project-detail-tags tags">
+                <span class="highlight-tag"><i class="fab fa-python icon-spacing"></i> Python</span>
+                <span class="highlight-tag"><i class="fas fa-desktop icon-spacing"></i> PyQt5 (GUI)</span>
+                <span class="highlight-tag"><i class="fas fa-database icon-spacing"></i> SQLite Database</span>
+                <span class="highlight-tag"><i class="fas fa-server icon-spacing"></i> Backend Logic</span>
+            </div>
+
+            <div class="project-detail-links">
+                <a href="https://github.com/UnathiDev/InventoryManagementSystem" target="_blank" class="btn-primary"><i class="fab fa-github icon-spacing"></i> View on GitHub</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Unathi Okhue. All rights reserved. Built with ❤️ and Code.</p>
+    </footer>
+
+    <!-- Link to your shared JavaScript file for mobile menu toggle -->
+    <script src="../index.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
