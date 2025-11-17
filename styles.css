@@ -639,6 +639,10 @@ footer {
 /* =====================================================================
    PROJECTS PAGE SPECIFIC STYLES (`projects.html`)
    ===================================================================== */
+#projects {
+    padding-top: 100px;
+}
+
 #projects-page {
     /* Uses general .page-section styles, no special layout for the section itself */
 }
@@ -1569,5 +1573,103 @@ footer {
     }
     .project-detail-title {
         margin-top: var(--spacing-lg);
+    }
+}
+
+/* =====================================================================
+   NEW CONTENT LAYOUT (Grid Structure for Projects and Sidebar)
+   ===================================================================== */
+/* =====================================================================
+   NEW CONTENT LAYOUT (Grid Structure for Projects and Sidebar)
+   ===================================================================== */
+.content-layout {
+    display: grid;
+    gap: var(--spacing-lg);
+    /* This line creates the two columns: 3 parts for projects, 1 part for card */
+    grid-template-columns: 3fr 1fr; 
+    padding-top: var(--spacing-sm);
+}
+
+.main-projects-column {
+    min-width: 0; 
+}
+
+.sidebar-column {
+    min-width: 0;
+}
+
+/* =====================================================================
+   GITHUB PROFILE CARD STYLES
+   ===================================================================== */
+.github-card {
+    background-color: var(--color-bg-secondary);
+    border-radius: 12px;
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-subtle);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid var(--color-border);
+    transition: box-shadow 0.3s ease;
+    /* Aligns the card to the top of its grid cell */
+    align-self: start; 
+}
+
+.github-card:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.github-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: var(--spacing-sm);
+    border: 3px solid var(--color-accent-blue);
+}
+
+.github-username {
+    font-family: var(--font-family-title);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.github-bio {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+}
+
+.github-link .fa-github {
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+/* =====================================================================
+   RESPONSIVE DESIGN 
+   ===================================================================== */
+@media (max-width: 1024px) {
+    .content-layout {
+        /* Tablet adjustment */
+        grid-template-columns: 2fr 1fr; 
+    }
+}
+
+@media (max-width: 768px) {
+    .content-layout {
+        /* Mobile: Collapse to single column */
+        grid-template-columns: 1fr; 
+        gap: var(--spacing-md);
+    }
+    .sidebar-column {
+        /* Pushes the GitHub card to the very top before the projects list on mobile */
+        order: -1; 
+    }
+    /* Ensure the project grid also uses a single column on mobile */
+    .projects-grid {
+        grid-template-columns: 1fr; 
     }
 }
