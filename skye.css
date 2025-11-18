@@ -11,6 +11,34 @@ body {
     position: relative; /* For background gradient positioning */
 }
 
+/* =====================================================================
+   CUSTOM SCROLLBAR STYLES (for Chrome, Safari, and Edge)
+   ===================================================================== */
+
+/* 1. Scrollbar Track (the background path) */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* 2. Scrollbar Track (using a very light green/white track) */
+::-webkit-scrollbar-track {
+    background: #e8f5e9; /* Light part of your gradient */
+    border-radius: 10px;
+}
+
+/* 3. Scrollbar Thumb (the draggable part) - Using a complimentary eco-green */
+::-webkit-scrollbar-thumb {
+    background-color: #007bff; /* A clean, eco-friendly green */
+    border-radius: 10px;
+    border: 2px solid #e8f5e9; /* Border matching the track */
+}
+
+/* 4. Scrollbar Thumb Hover state */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #3e94f0; /* Lighter green on hover */
+}
+
 /* Dynamic Background Gradient */
 .background-gradient {
     position: fixed;
