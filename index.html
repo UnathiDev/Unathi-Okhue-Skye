@@ -3,91 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unathi Okhue - We've Moved</title>
+    <title>Unathi Okhue - New Digital Home</title>
     <!-- SEO Protection -->
-    <link rel="canonical" href="[https://unathiokhue.netlify.app](https://unathiokhue.netlify.app/)" />
-    <meta http-equiv="refresh" content="5; url=[https://unathiokhue.netlify.app/](https://unathiokhue.netlify.app/)" />
-    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+    <link rel="canonical" href="https://unathiokhue.netlify.app/" />
+    <meta http-equiv="refresh" content="5; url=https://unathiokhue.netlify.app/" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+
         body {
-            background: linear-gradient(135deg, #f0f2f5 0%, #d7e3fc 100%);
+            background: radial-gradient(circle at top left, #e0e7ff, #ffffff),
+                        radial-gradient(circle at bottom right, #d7e3fc, #f0f2f5);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
         }
+
+        /* Ambient Background Elements */
+        .orb {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, rgba(93, 114, 225, 0.1), rgba(139, 159, 253, 0.05));
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
         .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 24px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 32px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.05);
+            width: 90%;
+            max-width: 380px;
         }
+
         .profile-stack {
             position: relative;
-            width: 120px;
-            height: 120px;
-            margin: 0 auto;
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 1.5rem;
         }
+
         .profile-img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            border-radius: 28px;
             border: 4px solid white;
             object-fit: cover;
             position: absolute;
             top: 0;
             left: 0;
             z-index: 2;
+            transform: rotate(-5deg);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
+
         .skye-logo {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            border: 4px solid #5D72E1;
-            background: white;
-            padding: 10px;
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            border: 3px solid #ffffff;
+            background: #ffffff;
+            padding: 8px;
             position: absolute;
-            bottom: 0;
+            bottom: 5px;
             right: 0;
             z-index: 3;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: rotate(10deg);
+            box-shadow: 0 8px 16px rgba(93, 114, 225, 0.2);
         }
+
         .btn-primary {
             background: #5D72E1;
-            transition: all 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(93, 114, 225, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
+
         .btn-primary:hover {
             background: #4a5dc5;
-            transform: translateY(-2px);
+            transform: scale(1.02);
+            box-shadow: 0 15px 20px -3px rgba(93, 114, 225, 0.4);
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 4px;
+            background: rgba(93, 114, 225, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #5D72E1;
+            width: 0%;
+            animation: progress 5s linear forwards;
+        }
+
+        @keyframes progress {
+            from { width: 0%; }
+            to { width: 100%; }
+        }
+
+        @media (max-width: 640px) {
+            .glass-card {
+                padding: 2rem 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="glass-card p-8 max-w-sm w-full text-center mx-4">
+    <div class="orb" style="top: -100px; left: -100px;"></div>
+    <div class="orb" style="bottom: -100px; right: -100px;"></div>
+
+    <div class="glass-card p-10 text-center mx-4 relative overflow-hidden">
         <!-- Dual Image Profile Section -->
-        <div class="profile-stack mb-6">
-            <!-- Replace src with your actual image paths -->
+        <div class="profile-stack">
             <img src="images/UnathiOkhueProfilePic2.jpg" alt="Unathi Okhue" class="profile-img">
             <img src="images/SkyeLogo.jpeg" alt="Skye Ecotech" class="skye-logo">
         </div>
 
-        <h1 class="text-2xl font-bold text-gray-800 mb-2">Unathi Okhue</h1>
-        <p class="text-sm text-blue-600 font-semibold mb-4 tracking-wide uppercase">Founder of Skye Ecotech</p>
+        <h1 class="text-3xl font-extrabold text-slate-800 mb-1 tracking-tight">Unathi Okhue</h1>
+        <p class="text-xs text-indigo-600 font-bold mb-6 tracking-widest uppercase italic">Founder • Skye Ecotech</p>
         
-        <div class="bg-white/50 rounded-xl p-4 mb-6">
-            <p class="text-gray-600 text-sm leading-relaxed">
-                We are building the future of sustainable computing. Our digital home has moved to a more efficient platform.
+        <div class="bg-white/40 rounded-2xl p-5 mb-8 border border-white/60">
+            <p class="text-slate-600 text-sm leading-relaxed font-medium">
+                We're migrating to a high-performance environment to better serve our mission of sustainable computing.
             </p>
         </div>
-
-        <p class="text-xs text-gray-400 mb-6">Redirecting you in 5 seconds...</p>
         
-        <a href="[https://unathiokhue.netlify.app](https://unathiokhue.netlify.app)" class="btn-primary text-white px-6 py-3 rounded-full font-bold inline-block w-full">
-            Visit New Site Now
+        <a href="https://unathiokhue.netlify.app" class="btn-primary text-white px-8 py-4 rounded-2xl font-bold inline-block w-full text-sm">
+            Enter New Digital Home
         </a>
+
+        <div class="progress-bar-container">
+            <div class="progress-fill"></div>
+        </div>
+        <p class="text-[10px] text-slate-400 mt-3 font-semibold uppercase tracking-tighter">Automatic redirection in progress</p>
     </div>
 </body>
 </html>
-
